@@ -1,12 +1,74 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+body, .navbar {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+p.notice {
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar {
+  background-color: #289832d4;
+  border-bottom: 1px solid #cccccc;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.navbar-item {
+  margin-right: 20px;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Burger Menu */
+.burger-menu {
+  display: none; /* Hide the burger menu by default for larger screens */
+  cursor: pointer;
+  position: absolute; /* Position absolutely */
+  left: 8px; /* Align to the far left */
+}
+
+.burger-line {
+  width: 25px;
+  height: 3px;
+  background-color: #333333; /* Set the color for burger menu lines */
+  margin: 5px 0;
+}
+
+/* Media Query for Burger Menu */
+@media only screen and (max-width: 768px) {
+  .navbar-menu {
+    display: none; /* Hide the navbar menu for smaller screens by default */
+    &.active {
+      display: flex; /* Show the navbar menu when active */
+      flex-direction: column;
+      background-color: #ffffff; /* Set background color for navbar menu */
+      border-bottom: 1px solid #cccccc; /* Add a border for separation */
+      padding: 10px;
+      position: absolute;
+      top: 60px; /* Adjust the top position according to your navbar height */
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+  .burger-menu {
+    display: block; /* Show the burger menu for smaller screens */
+  }
 }

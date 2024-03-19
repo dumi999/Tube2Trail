@@ -1,0 +1,2 @@
+class LikedActivitiesController < ApplicationController
+end

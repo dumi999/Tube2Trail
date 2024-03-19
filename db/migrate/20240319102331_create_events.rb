@@ -3,8 +3,8 @@ class CreateEvents < ActiveRecord::Migration[7.1]
     create_table :events do |t|
       t.date :date
       t.boolean :creator
-      t.references :users, null: false, foreign_key: true
-
+      t.references :user, null: false, foreign_key: true
+      t.references :activity, null: false, foreign_key: true
       t.timestamps
     end
   end

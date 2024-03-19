@@ -9,6 +9,9 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   has_many :messages
-  has_many :events
+  has_many :chatrooms, through: :messages
+  has_many :participants
+  has_many :events, through: :participants
   has_many :liked_activities
+  has_many :activities, through: :liked_activities
 end

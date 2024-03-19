@@ -4,6 +4,7 @@ body, .navbar {
 }
 
 p.notice {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -69,6 +70,17 @@ p.notice {
     }
   }
   .burger-menu {
-    display: block; /* Show the burger menu for smaller screens */
+    display: block;
   }
+}
+
+
+/* Bottom Nav */
+.navbar-bottom {
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-bottom .navbar-item {
+  color: white;
 }

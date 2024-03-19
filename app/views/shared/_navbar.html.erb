@@ -1,20 +1,17 @@
 <nav class="navbar">
   <div class="container">
     <div class="navbar-brand">
-      <!-- Burger Menu -->
       <div class="burger-menu" id="burger-menu">
         <div class="burger-line"></div>
         <div class="burger-line"></div>
         <div class="burger-line"></div>
       </div>
-      <!-- Logo -->
-      <div class="logo-container"> <!-- Added a container for the logo -->
+      <div class="logo-container">
         <%= link_to "Tube2Trail", root_path, class: "navbar-item logo-item" %>
       </div>
     </div>
     <div class="navbar-menu" id="navbar-menu">
       <div class="navbar-end">
-        <!-- Links -->
         <%= link_to "Login", new_user_session_path, class: "navbar-item" %>
         <%= link_to "Sign Up", new_user_registration_path, class: "navbar-item" %>
         <%= link_to "Events", events_path, class: "navbar-item" %>
@@ -22,7 +19,6 @@
     </div>
   </div>
 </nav>
-
 
 <body>
 <%= javascript_include_tag "navbar" %>

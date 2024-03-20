@@ -1,0 +1,9 @@
+<% @activities.each do |activity| %>
+  <% if activity.cover_image.attached? %>
+    <%= cl_image_tag activity.cover_image.key, height: 300, width: 400, crop: :fill, alt: "Activity Cover" %>
+  <% else %>
+    <p>No Image Available</p>
+  <% end %>
+
+  <p>Name: <%= activity.name %></p>
+<% end %>

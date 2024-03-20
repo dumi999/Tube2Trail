@@ -1,5 +1,6 @@
 class Activity < ApplicationRecord
   validates :difficulty, inclusion: { in: %w(easy moderate difficult) }
+  has_one_attached :cover_image
   validates :name, presence: true
   validates :description, presence: true
   has_many :events

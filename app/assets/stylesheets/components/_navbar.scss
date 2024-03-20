@@ -79,8 +79,16 @@ p.notice {
 .navbar-bottom {
   background-color: #333;
   color: #fff;
+  height: 80px;
 }
 
 .navbar-bottom .navbar-item {
   color: white;
+}
+
+.navbar-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 50px;
+  margin-left: 50px;
 }

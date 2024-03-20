@@ -23,11 +23,13 @@
 <!-- Bottom Navbar -->
 <nav class="navbar navbar-bottom fixed-bottom">
   <div class="container">
-    <%= link_to "Home", "#", class: "navbar-item bottom-item" %>
-    <%= link_to "Messages", "#", class: "navbar-item bottom-item" %>
-    <%= link_to "Profile", "#", class: "navbar-item bottom-item" %>
+    <%= image_tag("msg2w.png", alt: "Messages", class: "navbar-image bottom-item") %>
+      <%= link_to root_path do %>
+      <%= image_tag("homewh.png", alt: "Home", class: "navbar-image bottom-item") %>
+    <% end %>    <%= image_tag("profilewhte.png", alt: "Profile", class: "navbar-image bottom-item") %> <!-- prfw.png also good -->
   </div>
 </nav>
+
 
 
 <body>

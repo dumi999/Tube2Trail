@@ -1,6 +1,6 @@
 <div class="activities-container">
   <% @activities.each do |activity| %>
-    <div class="activity-card">
+    <div class="activity-card" data-controller='activities-text'>
       <% if activity.cover_image.attached? %>
         <%= cl_image_tag activity.cover_image.key, height: 300, width: 400, crop: :fill, alt: "Activity Cover", class: "activity-image" %>
       <% else %>
@@ -11,14 +11,20 @@
         <p class="activity-name"><%= activity.name %></p>
         <div class="activity-description">
           <!-- Display partial description -->
-          <%= truncate(activity.description, length: 70) %>
+          <p data-activities-text-target='shortText'><%= truncate(activity.description, length: 70) %></p>
+
+          <!-- Toggle full description -->
+          <p class="full-description" style="display: none;" data-activities-text-target='fullText'><%= activity.description %>
+           <span class="read-less"  >
+              <a href="#" class="view-less-link" data-action='click->activities-text#viewLess'>See less</a>
+            </span></p>
+
           <% if activity.description.length > 70 %>
             <span class="read-more">
-              <a href="#" class="view-more-link">View more</a>
+              <a href="#" class="view-more-link" data-action='click->activities-text#viewMore'>View more</a>
             </span>
           <% end %>
-          <!-- Hidden full description -->
-          <p class="full-description" style="display: none;"><%= activity.description %></p>
+
         </div>
         <p class="activity-difficulty">Difficulty: <%= activity.difficulty %></p>
       </div>

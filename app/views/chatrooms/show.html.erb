@@ -8,28 +8,27 @@
       <% end %>
     </div>
   </div>
+
   <div class="messages">
-      <% @chatroom.messages.each do |message| %>
-        <div id="message-<%= message.id %>" class="<%= message.user == current_user ? 'current-user' : 'other-user' %>">
-        <% if message.user.photo.attached? %>
-          <%= cl_image_tag message.user.photo.key, class: "avatar" %>
-        <% end %>
-          <small>
-            <strong><%= message.user.username %></strong>
-            <i><%= message.created_at.strftime("%d/%m/%y") %></i>
-          </small>
-          <p><%= message.content %></p>
+    <% @chatroom.messages.each do |message| %>
+      <div class="message <%= message.user == current_user ? 'current-user' : 'other-user' %>">
+        <div class="avatar">
+          <% if message.user.photo.attached? %>
+            <%= cl_image_tag message.user.photo.key, class: "avatar" %>
+          <% end %>
         </div>
-      <% end %>
-    </div>
-    <%= simple_form_for [@chatroom, @message],
-    html: {class: "d-flex"} do |f|
-  %>
-    <%= f.input :content,
-      label: false,
-      placeholder: "communicate with fellow adventurers here...",
-      wrapper_html: {class: "flex-grow-1"}
-    %>
+        <div class="message-content">
+          <small><%= message.user.username %></small>
+          <div class="content <%= message.user == current_user ? 'current-user' : 'other-user' %>">
+            <p><%= message.content %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= simple_form_for [@chatroom, @message], html: {class: "d-flex"} do |f| %>
+    <%= f.input :content, label: false, placeholder: "communicate with fellow adventurers here...", wrapper_html: {class: "flex-grow-1"} %>
     <%= f.submit "Send", class: "btn btn-primary mb-3" %>
   <% end %>
 

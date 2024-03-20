@@ -1,10 +1,27 @@
-<% @activities.each do |activity| %>
-  <% if activity.cover_image.attached? %>
-    <%= cl_image_tag activity.cover_image.key, height: 300, width: 400, crop: :fill, alt: "Activity Cover" %>
-  <% else %>
-    <p>No Image Available</p>
-  <% end %>
+<div class="activities-container">
+  <% @activities.each do |activity| %>
+    <div class="activity-card">
+      <% if activity.cover_image.attached? %>
+        <%= cl_image_tag activity.cover_image.key, height: 300, width: 400, crop: :fill, alt: "Activity Cover", class: "activity-image" %>
+      <% else %>
+        <p class="no-image">No Image Available</p>
+      <% end %>
 
-  <p><%= activity.name %></p>
-  <p> Difficulty: <%= activity.difficulty %> activity</p>
-<% end %>
+      <div class="activity-details">
+        <p class="activity-name"><%= activity.name %></p>
+        <div class="activity-description">
+          <!-- Display partial description -->
+          <%= truncate(activity.description, length: 70) %>
+          <% if activity.description.length > 70 %>
+            <span class="read-more">
+              <a href="#" class="view-more-link">View more</a>
+            </span>
+          <% end %>
+          <!-- Hidden full description -->
+          <p class="full-description" style="display: none;"><%= activity.description %></p>
+        </div>
+        <p class="activity-difficulty">Difficulty: <%= activity.difficulty %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

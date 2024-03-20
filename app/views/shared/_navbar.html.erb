@@ -1,37 +1,39 @@
-<nav class="navbar">
-  <div class="container">
-    <div class="navbar-brand">
-      <div class="burger-menu" id="burger-menu">
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-        <div class="burger-line"></div>
-      </div>
-      <div class="logo-container">
-        <%= link_to "Tube2Trail", root_path, class: "navbar-item logo-item" %>
-      </div>
-    </div>
-    <div class="navbar-menu" id="navbar-menu">
-      <div class="navbar-end">
-        <%= link_to "Login", new_user_session_path, class: "navbar-item" %>
-        <%= link_to "Sign Up", new_user_registration_path, class: "navbar-item" %>
-        <%= link_to "Events", events_path, class: "navbar-item" %>
-      </div>
+<div class="navbar top-nav">
+  <div class="container-fluid">
+    <!-- Logo in the middle of the navbar -->
+    <a class="navbar-brand" href="<%= root_path %>">
+      <%= image_tag("logov1.png", alt: "Messages", class: "logo") %>
+    </a>
+
+    <!-- Toggle button for collapsed navbar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar items -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Events", events_path, class: "nav-link" %>
+        </li>
+      </ul>
+      </ul>
     </div>
   </div>
-</nav>
+</div>
 
-<!-- Bottom Navbar -->
 <nav class="navbar navbar-bottom fixed-bottom">
   <div class="container">
     <%= image_tag("msg2w.png", alt: "Messages", class: "navbar-image bottom-item") %>
       <%= link_to root_path do %>
       <%= image_tag("homewh.png", alt: "Home", class: "navbar-image bottom-item") %>
-    <% end %>    <%= image_tag("profilewhte.png", alt: "Profile", class: "navbar-image bottom-item") %> <!-- prfw.png also good -->
+    <% end %>
+      <%= image_tag("profilewhte.png", alt: "Profile", class: "navbar-image bottom-item") %> <!-- prfw.png also good icon -->
   </div>
 </nav>
-
-
-
-<body>
-<%= javascript_include_tag "navbar" %>
-</body>

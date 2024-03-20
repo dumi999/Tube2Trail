@@ -37,43 +37,6 @@ p.notice {
   text-decoration: none;
 }
 
-/* Burger Menu */
-.burger-menu {
-  display: none; /* Hide the burger menu by default for larger screens */
-  cursor: pointer;
-  position: absolute; /* Position absolutely */
-  left: 8px; /* Align to the far left */
-}
-
-.burger-line {
-  width: 25px;
-  height: 3px;
-  background-color: #333333; /* Set the color for burger menu lines */
-  margin: 5px 0;
-}
-
-/* Media Query for Burger Menu */
-@media only screen and (max-width: 768px) {
-  .navbar-menu {
-    display: none; /* Hide the navbar menu for smaller screens by default */
-    &.active {
-      display: flex; /* Show the navbar menu when active */
-      flex-direction: column;
-      background-color: #ffffff; /* Set background color for navbar menu */
-      border-bottom: 1px solid #cccccc; /* Add a border for separation */
-      padding: 10px;
-      position: absolute;
-      top: 60px; /* Adjust the top position according to your navbar height */
-      left: 0;
-      right: 0;
-      z-index: 1;
-    }
-  }
-  .burger-menu {
-    display: block;
-  }
-}
-
 
 /* Bottom Nav */
 .navbar-bottom {
@@ -91,4 +54,62 @@ p.notice {
   height: 40px;
   margin-right: 50px;
   margin-left: 50px;
+}
+
+/* Top Navbar */
+.navbar.top-nav {
+  background-color: #289832d4;
+  border-bottom: 1px solid #cccccc;
+
+  .container-fluid {
+    padding: 15px 20px;
+  }
+
+  .navbar-brand {
+    height: 60px;
+    margin-right: 40px;;
+  }
+
+  .logo {
+    height: 60px;
+    width: auto;
+  }
+
+  .navbar-toggler {
+    order: -1;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-menu {
+  text-align: center;
+}
+
+.nav-link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.4;;
+}
+
+
+.home-page-icon {
+  opacity: 0.4;
 }

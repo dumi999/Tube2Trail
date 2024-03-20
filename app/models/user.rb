@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :username, presence: true
   validates :password, presence: true
   validates :email, presence: true
+  validates :description, presence: true
 
   has_many :messages
   has_many :chatrooms, through: :messages

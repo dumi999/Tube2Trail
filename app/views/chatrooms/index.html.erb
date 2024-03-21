@@ -4,9 +4,6 @@
   <ul>
     <% @chatrooms.each do |chatroom| %>
       <li>
-        <div class="chat-avatar">
-          <%= image_tag(chatroom.activity.avatar_url, class: "rounded-avatar") if chatroom.activity.avatar_url.present? %>
-        </div>
         <strong><%= link_to chatroom.activity.name, chatroom_path(chatroom) %></strong>
         <span>(Difficulty: <%= chatroom.activity.difficulty %>)</span>
         <p><%= truncate(chatroom.activity.description, length: 100) %></p>

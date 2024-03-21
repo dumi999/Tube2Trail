@@ -5,17 +5,13 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]
   resources :events, only: [:new, :create, :edit, :show, :index, :update]
-<<<<<<< HEAD
   resources :activities, only: [:index, :show] do
     resources :liked_activities, only: [:create]
   end
   resources :liked_activities, only: [:destroy]
-=======
-  resources :activities, only: [:index, :show]
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end
->>>>>>> 27d91865cd9829a40b45ced3dd356c44ca83cb0f
   get 'home', to: 'home#index', as: 'home'
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.

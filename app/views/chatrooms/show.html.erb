@@ -27,10 +27,18 @@
     <% end %>
   </div>
 
-  <%= simple_form_for [@chatroom, @message], html: {class: "d-flex"} do |f| %>
-    <%= f.input :content, label: false, placeholder: "communicate with fellow adventurers here...", wrapper_html: {class: "flex-grow-1"} %>
-    <%= f.submit "Send", class: "btn btn-primary mb-3" %>
-  <% end %>
-
-  <%= link_to 'Back to all chats', chatrooms_path %>
+<div class="chat-entry-wrapper">
+  <div class="chat-entry" data-controller="chat-entry">
+    <%= simple_form_for [@chatroom, @message], html: {class: "d-flex myMessage"} do |f| %>
+      <div class="input-group chat-and-button">
+        <%= f.input :content, input_html: { data: { chat_entry_target: 'inputField' } }, label: false, placeholder: "Communicate with adventurers here..." %>
+        <div class="input-group-append">
+          <div class="send-btn">
+            <%= f.submit "Send", class: "btn btn-primary btn-submit d-none", data: { 'chat-entry-target': 'submitButton' } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 </div>

@@ -9,13 +9,15 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag '_profile-show', media: 'all' %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&family=Paprika&family=Protest+Revolution&display=swap" rel="stylesheet">
   </head>
 
   <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
   <%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
+  <%= render "shared/flashes" %>
 
     <%= yield %>
   </body>

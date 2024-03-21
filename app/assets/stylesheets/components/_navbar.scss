@@ -37,11 +37,15 @@ p.notice {
   text-decoration: none;
 }
 
+
 /* Bottom Nav */
 .navbar-bottom {
   background-color: #333;
   color: #fff;
-  height: 80px;
+  position: fixed; /* Position the navbar fixed at the bottom */
+  bottom: 0; /* Align the navbar to the bottom of the viewport */
+  width: 100%; /* Make the navbar span the entire width of the viewport */
+  z-index: 1000;
 }
 
 .navbar-bottom .navbar-item {
@@ -131,4 +135,24 @@ p.notice {
   background-color: rgba(67, 66, 66, 0.552);
   border-radius: 30px;
   transform: translateX(-50%);
+}
+
+.alert {
+  position: fixed; /* Set the position to fixed */
+  bottom: 100px; /* Adjust the distance from the bottom to create space for the navbar */
+  left: 50%; /* Center the alert horizontally */
+  transform: translateX(-50%); /* Center the alert horizontally */
+  z-index: 1000; /* Ensure the alert appears above other content */
+  width: 400px; /* Set the width of the alert */
+  padding: 15px; /* Add padding to the alert */
+  background-color: #b5ffb8; /* Set background color */
+  border: 1px solid #ccc; /* Add a border for visual distinction */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for depth */
+}
+
+/* Adjust the position of the close button */
+.alert .close {
+  float: right; /* Move the close button to the right */
+  cursor: pointer;
 }

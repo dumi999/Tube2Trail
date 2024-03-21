@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create]
   resources :events, only: [:new, :create, :edit, :show, :index, :update]
   resources :activities, only: [:index, :show]
+  resources :chatrooms, only: [:show, :index] do
+    resources :messages, only: :create
+  end
   get 'home', to: 'home#index', as: 'home'
   get 'profile', to: 'profiles#show', as: 'profile'
 

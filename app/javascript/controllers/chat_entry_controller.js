@@ -1,5 +1,3 @@
-// app/javascript/controllers/chat_entry_controller.js
-
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {

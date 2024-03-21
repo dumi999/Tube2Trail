@@ -1,0 +1,51 @@
+.activity-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: -20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+}
+
+
+.like-button,
+.dislike-button {
+  width: 60px; /* Increase width for larger buttons */
+  height: 60px; /* Increase height for larger buttons */
+  //border: none;
+  border-radius: 50px;
+  //cursor: pointer;
+  font-size: 30px; /* Increase font size for larger text */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Add padding for more space inside buttons */
+}
+
+.like-button {
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+}
+
+.dislike-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.like-button:hover {
+  background-color: #45a049;
+}
+
+.dislike-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Switch position of the dislike button */
+.dislike-button {
+  order: -1;
+}

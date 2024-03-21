@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <!-- Logo in the middle of the navbar -->
     <a class="navbar-brand" href="<%= root_path %>">
-      <%= image_tag("logov1.png", alt: "Messages", class: "logo") %>
+      <%= image_tag("yl.png", alt: "Messages", class: "logo") %>
     </a>
 
     <!-- Toggle button for collapsed navbar -->
@@ -10,7 +10,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar items -->
+    <!-- Navbar items, (still need to add more) -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
@@ -22,7 +22,12 @@
         <li class="nav-item">
           <%= link_to "Events", events_path, class: "nav-link" %>
         </li>
-      </ul>
+        <li class="nav-item">
+          <%= link_to "Calendar", events_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
       </ul>
     </div>
   </div>

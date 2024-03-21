@@ -1,0 +1,44 @@
+<div class="chatrooms-show">
+  <div class="banner banner-show-page">
+    <%= image_tag("pennine_banner.jpeg", class: "banner-image") %>
+    <h1><%= @activity.name %></h1>
+    <div class="create-event-btn">
+      <%= link_to new_event_path do %>
+        <i class="fa-solid fa-person-hiking"></i>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="messages">
+    <% @chatroom.messages.each do |message| %>
+      <div class="message <%= message.user == current_user ? 'current-user' : 'other-user' %>">
+        <div class="avatar">
+          <% if message.user.photo.attached? %>
+            <%= cl_image_tag message.user.photo.key, class: "avatar" %>
+          <% end %>
+        </div>
+        <div class="message-content">
+          <small><%= message.user.username %></small>
+          <div class="content <%= message.user == current_user ? 'current-user' : 'other-user' %>">
+            <p><%= message.content %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<div class="chat-entry-wrapper">
+  <div class="chat-entry" data-controller="chat-entry">
+    <%= simple_form_for [@chatroom, @message], html: {class: "d-flex myMessage"} do |f| %>
+      <div class="input-group chat-and-button">
+        <%= f.input :content, input_html: { data: { chat_entry_target: 'inputField' } }, label: false, placeholder: "Communicate with adventurers here..." %>
+        <div class="input-group-append">
+          <div class="send-btn">
+            <%= f.submit "Send", class: "btn btn-primary btn-submit d-none", data: { 'chat-entry-target': 'submitButton' } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>

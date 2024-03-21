@@ -1,1 +1,25 @@
-// Specific CSS for your home-page
+
+#homepage {
+  background: linear-gradient(135deg, #0b2215, #6b9b7b); /* Gradient background */
+  color: #FFFFFF; /* White text color */
+  font-family: Arial, sans-serif; /* Font family */
+  margin: 0;
+  padding: 0;
+  min-height: 90vh;
+  text-align: center;
+
+}
+
+.title {
+  color: #e5efe9;
+  padding-top: 300px;
+  font-family: "Sharp Grotesk", sans-serif;
+  font-size: xx-large;
+}
+
+#subheader {
+  color: #e5efe9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Sharp Grotesk", sans-serif;
+}

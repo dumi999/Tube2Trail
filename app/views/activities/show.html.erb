@@ -1,0 +1,43 @@
+<div class="activities-container">
+  <div class="activity-card" data-controller='activities-text'>
+    <div class="activity-image">
+      <% if @activity.cover_image.attached? %>
+        <%= cl_image_tag @activity.cover_image.key, alt: "Activity Cover", class: "activity-image" %>
+      <% else %>
+        <p class="no-image">No Image Available</p>
+      <% end %>
+    </div>
+
+    <div class="activity-details">
+      <p class="activity-name"><%= @activity.name %></p>
+      <div class="activity-description">
+        <p data-activities-text-target='shortText'><%= truncate(@activity.description, length: 100) %></p>
+
+        <!-- Toggle full description -->
+        <p class="full-description" style="display: none;" data-activities-text-target='fullText'><%= @activity.description %>
+          <span class="read-less">
+            <a href="#" class="view-less-link" data-action='click->activities-text#viewLess'><i class="fa-solid fa-chevron-up"></i></a>
+          </span>
+        </p>
+
+        <% if @activity.description.length > 100 %>
+          <span class="read-more">
+            <a href="#" class="view-more-link" data-action='click->activities-text#viewMore'><i class="fa-solid fa-chevron-down"></i></a>
+          </span>
+        <% end %>
+      </div>
+
+      <p class="activity-difficulty">Difficulty: <%= @activity.difficulty %></p>
+
+      <div class="activity-actions">
+        <%= link_to activity_liked_activities_path(@activity), data: { turbo_method: :post, action: 'click->activities#likeActivity', 'activity-id': @activity.id }, class: 'like-button' do %>
+          <i class="fa-solid fa-shoe-prints"></i>
+        <% end %>
+
+        <button class="dislike-button" data-action='click->activities#dislikeActivity' data-activity-id="<%= @activity.id %>">
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

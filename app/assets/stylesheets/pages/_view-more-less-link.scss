@@ -1,0 +1,24 @@
+/* Styling for "View more" and "View less" links */
+.view-more-link,
+.view-less-link {
+  color: #ffffff; /* White text color */
+  text-decoration: underline; /* Underline text */
+}
+
+/* Hover effect for links */
+.view-more-link:hover,
+.view-less-link:hover {
+  color: #cccccc; /* Lighter color on hover */
+}
+
+/* Adjust margin for the "View more" button */
+.read-more,
+.read-less {
+  margin-bottom: 20px; /* Increase margin bottom for more space */
+}
+
+/* Increase font size for "View more" and "View less" buttons */
+.read-more a,
+.read-less a {
+  font-size: 20px;
+}

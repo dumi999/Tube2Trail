@@ -5,7 +5,14 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]
   resources :events, only: [:new, :create, :edit, :show, :index, :update]
-  resources :activities, only: [:index, :show]
+  resources :activities, only: [:index, :show] do
+    resources :liked_activities, only: [:create]
+  end
+  resources :liked_activities, only: [:destroy]
+<<<<<<< HEAD
+
+=======
+>>>>>>> navigate_activities
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end

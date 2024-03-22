@@ -1,3 +1,6 @@
+
+
+
 <div class="profile-header">
   <div class="container">
     <div class="profile-info">
@@ -13,13 +16,14 @@
   </div>
 </div>
 
-<div class="description-container">
+<div class="description-container" id="about-me-container">
   <div class="container1">
     <div class="about-me">
-      <p><strong>About Me:</strong> <%= @user.description %></p>
+      <p><strong>About Me:</strong> <span id="about-me-content"><%= @user.description %></span></p>
     </div>
   </div>
 </div>
+
 
 
 <div class="liked-activities-container">
@@ -60,3 +64,46 @@
   <p><strong>Liked Activities:</strong> <%= @user.description %></p>
   </div>
 </div>
+
+<script>
+document.addEventListener('click', function(event) {
+  var aboutMeContainer = document.getElementById('about-me-container');
+  var target = event.target;
+  if (target.closest('.description-container') === aboutMeContainer) {
+    makeEditable();
+  }
+});
+
+function makeEditable() {
+  var aboutMeContent = document.getElementById('about-me-content');
+  var description = aboutMeContent.textContent.trim();
+  aboutMeContent.innerHTML = '<textarea id="edit-about-me" rows="5" cols="50" maxlength="200">' + description + '</textarea>'; // Adjust rows, cols, and maxlength as needed
+  var editArea = document.getElementById('edit-about-me');
+  editArea.focus();
+  editArea.addEventListener('blur', function() {
+    aboutMeContent.innerHTML = editArea.value;
+    // You can also send an AJAX request here to update the database with the new description
+  });
+}
+
+function saveDescription() {
+  var editArea = document.getElementById('edit-about-me');
+  var description = editArea.value;
+  localStorage.setItem('aboutMeDescription', description);
+}
+
+// Function to load the saved input data from localStorage
+function loadDescription() {
+  var savedDescription = localStorage.getItem('aboutMeDescription');
+  if (savedDescription) {
+    var editArea = document.getElementById('edit-about-me');
+    editArea.value = savedDescription;
+  }
+}
+
+// Event listener to save the input data when leaving the page
+window.addEventListener('beforeunload', function() {
+  saveDescription();
+});
+
+</script>

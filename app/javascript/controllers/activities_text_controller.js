@@ -22,17 +22,3 @@ export default class extends Controller {
     this.readLessTarget.style.display = "none";
   }
 }
-
-  // // JavaScript to toggle visibility of full description
-
-  //   viewMoreLinks.forEach(function(link) {
-  //     link.addEventListener('click', function(event) {
-  //       const descriptionContainer = this.closest('.activity-description');
-  //       const fullDescription = descriptionContainer.querySelector('.full-description');
-  //       // Hide the activity-description container
-  //       // descriptionContainer.style.display = 'none';
-  //       fullDescription.style.display = 'block'; // Show the full description
-  //       this.parentNode.style.display = 'none';
-  //        // Hide the "View more" link
-  //     });
-  //   });

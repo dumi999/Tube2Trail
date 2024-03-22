@@ -1,25 +1,31 @@
+
 <div class="profile-header">
   <div class="container">
     <div class="profile-info">
       <div class="avatar-container">
-  <% if @user.photo.present? %>
-    <%= image_tag(@user.photo.url, alt: "Avatar", class: "avatar-img") %>
-  <% else %>
-    <div class="default-avatar"></div>
-  <% end %>
-</div>
+        <% if @user.photo.present? %>
+          <%= image_tag(@user.photo.url, alt: "Avatar", class: "avatar-img") %>
+        <% else %>
+          <div class="default-avatar"></div>
+        <% end %>
+      </div>
       <h1 class="profile-name"><strong><%= @user.username %></strong></h1>
+    </div>
+    <div class="location" id="location-container" contenteditable>
+      <p>London<span id="location-content"></span></p>
     </div>
   </div>
 </div>
 
-<div class="description-container">
+
+<div class="description-container" id="about-me-container">
   <div class="container1">
     <div class="about-me">
-      <p><strong>About Me:</strong> <%= @user.description %></p>
+      <p><strong>About Me:</strong> <span id="about-me-content"><%= @user.description %></span></p>
     </div>
   </div>
 </div>
+
 
 
 <div class="liked-activities-container">
@@ -44,19 +50,86 @@
   <div class="avatar-circle"></div>
 </div>
 <div class="card-container">
-    <div class="tiny-card"></div>
-    <div class="tiny-card"></div>
-    <div class="tiny-card"></div>
-    <div class="tiny-card"></div>
-    <div class="tiny-card"></div>
-    <div class="tiny-card"></div>
-    <div class="tiny-card"></div>
+    <div class="tiny-card"><strong>M</strong></div>
+    <div class="tiny-card"><strong>T</strong></div>
+    <div class="tiny-card"><strong>W</strong></div>
+    <div class="tiny-card"><strong>T</strong></div>
+    <div class="tiny-card"><strong>F</strong></div>
+    <div class="tiny-card"><strong>S</strong></div>
+    <div class="tiny-card"><strong>S</strong></div>
 </div>
 
 </div>
 
-<div class="liked-activities-container">
-  <div class="container">
-  <p><strong>Liked Activities:</strong> <%= @user.description %></p>
+<div class="liked-journey-container">
+  <div class="containerjourneys">
+    <p><strong>My Journeys:</strong></p>
+    <div class="card-container">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('click', function(event) {
+  var aboutMeContainer = document.getElementById('about-me-container');
+  var target = event.target;
+  if (target.closest('.description-container') === aboutMeContainer) {
+    makeEditable();
+  }
+});
+
+function makeEditable() {
+  var aboutMeContent = document.getElementById('about-me-content');
+  if (!aboutMeContent) return;
+
+  var description = aboutMeContent.textContent.trim();
+  var editArea = document.createElement('textarea');
+  editArea.id = 'edit-about-me';
+  editArea.rows = '5';
+  editArea.cols = '50';
+  editArea.maxLength = '180';
+  editArea.value = description;
+
+  // Replace the content with the textarea
+  aboutMeContent.innerHTML = '';
+  aboutMeContent.appendChild(editArea);
+
+  editArea.focus();
+  editArea.addEventListener('blur', function() {
+    // Restore the original content
+    aboutMeContent.textContent = editArea.value;
+    saveDescription(editArea.value); // Call saveDescription with the updated value
+  });
+}
+
+function saveDescription(description) {
+  localStorage.setItem('aboutMeDescription', description);
+}
+
+// Function to load the saved input data from localStorage
+function loadDescription() {
+  var savedDescription = localStorage.getItem('aboutMeDescription');
+  var aboutMeContent = document.getElementById('about-me-content');
+  if (aboutMeContent && savedDescription) {
+    aboutMeContent.textContent = savedDescription;
+  }
+}
+
+loadDescription();
+
+// Event listener to save the input data when leaving the page
+window.addEventListener('beforeunload', function() {
+  var editArea = document.getElementById('edit-about-me');
+  if (editArea) {
+    saveDescription(editArea.value);
+  }
+});
+</script>

@@ -1,0 +1,134 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar-img {
+  width: 120px;
+  height: 138px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.profile-name {
+  margin-top: 10px;
+}
+
+.description-container {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(127, 127, 127, 0.535);
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 200px;
+}
+
+.liked-activities-container {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  background: rgba(127, 127, 127, 0.535);
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 420px;
+  text-align: center;
+}
+
+.about-me {
+  margin-top: -5px;
+  margin-left: 0px;
+  color:rgb(48, 48, 48);
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-ghost {
+  font-size: 14px;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 6px 10px;
+  border-radius: 30px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  margin: 2px;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  background-color: #4A4A4A;
+  color: #FFFFFF;
+}
+
+.lastbuttons {
+  justify-content: center;
+}
+
+.recent {
+  margin-top: 10px;
+}
+
+.avatar-circle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -15px;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(55, 55, 55);
+  margin: 15px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.tiny-card {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(118, 118, 118);
+  border-radius: 5px;
+}
+
+.default-avatar {
+  width: 120px;
+  height: 138px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #ccc;
+  border-radius: 40px;
+}

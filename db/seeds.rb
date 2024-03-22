@@ -84,5 +84,5 @@ chalfont.save!
 daffodils = Activity.new(name: 'Daffodils of Chartwell 20 Km Hike',
   description: "After cold and dark winter, vibrant yellow daffodils are symbol of spring which can be easily found in English counytryside. This is a leisurely circular hike from Hurst Green Station via Chartwell; Churchill's country house in Kent and is now preserved as an historic property by the National Trust. It is consistently one of their most visited sites with beautiful dispaly of daffodils in especially in March. Another highlight is Octavia Hill; co founder of National Trust, lived at Larkfield in Crockham Hill. She was an conservationist, a social reformer known to protect green spaces and communities access to Nature. Photo Credit : David Fenton",
   difficulty: 'difficult')
-  daffodils.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'Doffodils_of_chartwell.jpg')), filename: 'Daffodils_of_chartwell.jpg', content_type: 'image.png')
+  daffodils.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'Daffodils_of_chartwell.jpg')), filename: 'Daffodils_of_chartwell.jpg', content_type: 'image.png')
 daffodils.save!

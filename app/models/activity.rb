@@ -8,4 +8,5 @@ class Activity < ApplicationRecord
   has_one :chatroom
   has_many :liked_activities
   has_many :users, through: :liked_activities
+  has_one_attached :image
 end

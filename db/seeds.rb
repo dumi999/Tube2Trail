@@ -69,7 +69,7 @@ activity_datas = [
 
 # Seed data for the Activity model
 activity_datas.each do |activity_data|
-  activity = Activity.create!(activity_data)
-  # You can store the Cloudinary image key directly in your Activity model
-  # activity.update(cover_image_key: activity_data[:image_key])
+  activity = Activity.new(activity_data)
+  activity.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'winter_hill.jpg')), filename: 'winter_hill.png', content_type: 'image.png')
+activity.save!
 end

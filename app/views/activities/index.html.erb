@@ -11,7 +11,7 @@
         <p class="activity-name"><%= activity.name %></p>
         <div class="activity-description">
           <!-- Display partial description -->
-          <p data-activities-text-target='shortText'><%= truncate(activity.description, length: 100) %></p>
+          <p data-activities-text-target='shortText'><%= truncate(activity.description, length: 0) %></p>
 
           <!-- Toggle full description -->
           <p class="full-description" style="display: none;" data-activities-text-target='fullText'><%= activity.description %>
@@ -19,7 +19,7 @@
               <a href="#" class="view-less-link" data-action='click->activities-text#viewLess'><i class="fa-solid fa-chevron-up"></i></a>
             </span></p>
 
-          <% if activity.description.length > 100 %>
+          <% if activity.description.length > 0 %>
             <span class="read-more">
               <a href="#" class="view-more-link" data-action='click->activities-text#viewMore'><i class="fa-solid fa-chevron-down"></i></a>
             </span>
@@ -31,15 +31,13 @@
 
         <div class="activity-actions">
 
-        <%= link_to activity_liked_activities_path(activity), data: {turbo_method: :post, action: 'click->activities#likeActivity', 'activity-id': activity.id  }, class: 'like-button' do %>
+        <%= link_to activity_liked_activities_path(activity, liked: true), data: {turbo_method: :post, action: 'click->activities#likeActivity', 'activity-id': activity.id  }, class: 'like-button' do %>
          <i class="fa-solid fa-shoe-prints"></i>
         <% end %>
 
-
-
-           <button class="dislike-button" data-action='click->activities#dislikeActivity' data-activity-id="<%= activity.id %>">
-            <i class="fa-solid fa-x"></i> <!-- Icon for disliking -->
-          </button>
+        <%= link_to activity_liked_activities_path(activity, liked: false), data: { turbo_method: :post, action: 'click->activities#dislikeActivity', 'activity-id': activity.id }, class: 'dislike-button' do %>
+          <i class="fa-solid fa-x"></i>
+        <% end %>
       </div>
     </div>
   <% end %>

@@ -1,0 +1,12 @@
+<%= simple_form_for @event do |f| %>
+  <div class="form-inputs">
+    <%= f.input :date %>
+    <%= f.input :creator %>
+    <%= f.input :user_id, input_html: { value: current_user.id }, as: :hidden %>
+    <%= f.input :activity_id, input_html: { value: @event.activity_id }, as: :hidden %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'GO HIKING!' %>
+  </div>
+<% end %>

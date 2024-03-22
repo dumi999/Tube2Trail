@@ -9,10 +9,7 @@ Rails.application.routes.draw do
     resources :liked_activities, only: [:create]
   end
   resources :liked_activities, only: [:destroy]
-<<<<<<< HEAD
 
-=======
->>>>>>> navigate_activities
   resources :chatrooms, only: [:show, :index] do
     resources :messages, only: :create
   end

@@ -6,16 +6,23 @@ class EventsController < ApplicationController
   end
 
   def show
+    @activity = @event.activity
+    @chatroom = @event.activity.chatroom
   end
 
   def new
     @event = Event.new
+    @event.user_id = current_user.id
+    @event.activity_id = params[:activity_id]
   end
 
   def create
     @event = Event.new(event_params)
-    @event.save
-    redirect_to event_path(@event)
+    if @event.save
+      redirect_to event_path(@event)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -33,7 +40,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:task).permit(:date, :creator)
+    params.require(:event).permit(:date, :creator, :user_id, :activity_id)
   end
-
 end

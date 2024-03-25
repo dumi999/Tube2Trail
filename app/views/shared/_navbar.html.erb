@@ -1,6 +1,5 @@
 <div class="navbar top-nav">
   <div class="container-fluid">
-    <!-- Logo in the middle of the navbar -->
     <a class="navbar-brand" href="<%= root_path %>">
       <%= image_tag("yl.png", alt: "Messages", class: "logo") %>
     </a>
@@ -13,21 +12,24 @@
     <!-- Navbar items, (still need to add more) -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Events", events_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Calendar", events_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Events", events_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Calendar", events_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

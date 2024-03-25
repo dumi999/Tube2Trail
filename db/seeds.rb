@@ -3,20 +3,79 @@ LikedActivity.destroy_all
 Chatroom.destroy_all
 Activity.destroy_all
 
-winter = Activity.new(name: 'Winter Hill & The Thames',   description: "A varied circular hike from Maidenhead to Cookham Moor and Bourne End with panoramic views across the river valley from Winter Hill and sections of the Thames path. We will have snack picnic lunch on Cock Marsh close to Bourne End which has a rail station (you would need to get a single to Maidenhead for the mainline) if you want to return approx. halfway along the walk. Cock Marsh is also very close to the Bounty Pub on the Thames for any refreshments. Some of the woodland areas may display spring bluebells. Please bring water and snack lunch for the walk. The walk should finish at about 4.30pm, however the time may be earlier or later than this depending on the weather and pace. THE HIKE IS LARGELY FLAT BUT DOES HAVE SOME CONSIDERABLE HILL CLIMBS SUCH AS WINTER HILL.",
-      difficulty: 'moderate')
-winter.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'winter_hill.jpg')), filename: 'winter_hill.png', content_type: 'image.png')
+thailand_hike = Activity.new(
+  name: ' Hike & Wildlife Watching in Thailand 🐘🐅🎍',
+  description: "Embark on an unforgettable wildlife watching and hiking adventure in the lush wilderness of Thailand. Immerse yourself in the vibrant ecosystems of this tropical paradise as you trek through verdant rainforests and pristine landscapes. With each step, discover a rich tapestry of biodiversity, from colorful bird species flitting amongst the canopy to elusive mammals roaming the forest floor. Guided by experienced naturalists, learn about the intricate balance of these ecosystems and the importance of conservation efforts to protect Thailand's precious wildlife. Along the way, pause to admire breathtaking vistas, cascading waterfalls, and hidden gems tucked away in the heart of nature. After a day of exploration, unwind in comfortable accommodations nestled amidst the wilderness, where the
+  sounds of the forest serenade you to sleep under the starlit sky. Whether you're an avid nature enthusiast or simply seeking an escape into the wild, Thailand's wildlife watching and hiking experience promises an enriching journey filled with awe-inspiring encounters and unforgettable moments amidst the beauty of nature.",
+  difficulty: 'moderate'
+)
+
+thailand_hike.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'thailand_hike.jpg')),
+  filename: 'thailand_hike.jpg',
+  content_type: 'image.jpg'
+)
+thailand_hike.save!
+
+mountain_biking = Activity.new(
+  name: 'Mountain Biking Adventure 🚵🏻',
+  description: "Experience the thrill of mountain biking through rugged terrain and breathtaking scenery on this adrenaline-fueled adventure. Our guided mountain biking tour takes you on an exhilarating journey through winding trails, challenging climbs, and thrilling descents in the heart of nature. Whether you're a seasoned pro or a beginner, our experienced guides will tailor the route to suit your skill level, ensuring an unforgettable experience for all. Along the way, you'll encounter stunning vistas, hidden gems, and wildlife encounters, making each twist and turn of the trail a new adventure. Bring your own bike or rent one from us, and get ready to pedal your way through an unforgettable mountain biking escapade.",
+  difficulty: 'difficult'
+)
+
+mountain_biking.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'mountain_biking.jpg')),
+  filename: 'mountain_biking.jpg',
+  content_type: 'image.jpg'
+)
+mountain_biking.save!
+
+kilimanjaro_climbing = Activity.new(
+  name: 'Summiting Mount Kilimanjaro 🗻',
+  description: "Embark on the ultimate adventure of summiting Mount Kilimanjaro, the tallest peak in Africa and one of the Seven Summits. This iconic mountain offers a once-in-a-lifetime challenge for climbers seeking to conquer its legendary heights. Our guided expedition takes you on a thrilling journey through diverse ecosystems, from lush rainforests to alpine meadows and otherworldly landscapes. You'll traverse rugged terrain, navigate steep ascents, and brave high altitudes as you make your way to the summit, Uhuru Peak, standing at an impressive 5,895 meters (19,341 feet) above sea level. Along the way, you'll be treated to awe-inspiring views of the surrounding savannah and distant horizons, while experiencing the camaraderie and sense of accomplishment that comes with climbing one of the world's most famous mountains. Join us for an unforgettable adventure and make your dream of reaching the Roof of Africa a reality.",
+  difficulty: 'extreme'
+)
+
+kilimanjaro_climbing.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'kilimanjaro_climbing.jpg')),
+  filename: 'kilimanjaro_climbing.jpg',
+  content_type: 'image.jpg'
+)
+kilimanjaro_climbing.save!
+
+winter = Activity.new(
+  name: 'Winter Hill & The Thames',
+  description: "A varied circular hike from Maidenhead to Cookham Moor and Bourne End with panoramic views across the river valley from Winter Hill and sections of the Thames path. We will have snack picnic lunch on Cock Marsh close to Bourne End which has a rail station (you would need to get a single to Maidenhead for the mainline) if you want to return approx. halfway along the walk. Cock Marsh is also very close to the Bounty Pub on the Thames for any refreshments. Some of the woodland areas may display spring bluebells. Please bring water and snack lunch for the walk. The walk should finish at about 4.30pm, however the time may be earlier or later than this depending on the weather and pace. THE HIKE IS LARGELY FLAT BUT DOES HAVE SOME CONSIDERABLE HILL CLIMBS SUCH AS WINTER HILL.",
+  difficulty: 'moderate'
+)
+
+winter.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'winter_hill.jpg')),
+  filename: 'winter_hill.png',
+  content_type: 'image.png'
+)
 winter.save!
-epping = Activity.new(name: 'Epping Forest Hike - Circular Hike', description: "Walking Pace: 2 miles per hour. Average. Relaxed walking Pace. No steep hills. Mostly Flat and easy walking Pace. Epping Forest is one of a number of green spaces that lie just outside London. It covers around 6,000 acres of ancient woodland consisting of various tree species including oak and beech, many pollarded (pruned) from medieval times. The forest was a royal hunting ground and is now run and managed by The City of London Corporation that also manages Burnham Beeches and Hampstead Heath. Some features on this walk include Queen Elizabeth's Tudor hunting lodge (outside view), a number of lakes and ponds such as Connaught Water (named after the Duke of Connaught) and the Loughton earthworks (Iron Age Camp) thought to date back to 500 BC, and a number of panoramic views such as 'High Beach.'", difficulty: 'easy')
-epping.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'Epping_forest_hike.jpg')), filename: 'Epping_forest_hike.jpg', content_type: 'image.png')
+
+epping = Activity.new(
+  name: 'Epping Forest Hike - Circular Hike 🌳',
+  description: "Embark on a mesmerizing circular hike through Epping Forest, immersing yourself in its timeless beauty. Traverse winding paths under towering oaks, discovering tranquil glades and meandering streams along the way. Encounter centuries-old trees and ancient settlements, while panoramic viewpoints offer breathtaking vistas of the forest canopy. Whether you're a seasoned hiker or a nature enthusiast, this unforgettable journey promises a rejuvenating escape into one of England's most cherished natural landscapes.",
+  difficulty: 'moderate'
+)
+epping.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'Epping_forest_hike.jpg')),
+  filename: 'Epping_forest_hike.jpg',
+  content_type: 'image.png'
+)
 epping.save!
-chalfont = Activity.new(name: 'Chalfont Circular Hike',
-  description: "Join us for a our Chalfont Circular. Chalfont is the gateway to the Chilterns area of outstanding beauty. With rolling hills, and gentle wooded valleys of chalk escarpments, this is a walk of changing landscape. We're likely to see buzzards, skylark, wild garlic, and other flora and fauna of spring. A moderate level of fitness is needed to join this walk. We recommend bringing 1ltr of water and a packed lunch with you. We'll stop halfway at a pub for a hot drink. There will be access to toilets at this halfway stop.",
-  difficulty: 'moderate')
-  chalfont.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'Chalfont_circular_hike.jpg')), filename: 'Chalfont_circular_hike.jpg', content_type: 'image.png')
+
+chalfont = Activity.new(
+  name: 'Chalfont Circular Hike',
+  description: "Embark on a scenic hike through Chalfont, nestled in the picturesque Chilterns. Explore rolling hills, wooded valleys, and charming countryside. With moderate difficulty, enjoy sightings of wildlife and a cozy pub stop. Discover the beauty of nature on this enriching adventure in Chalfont.",
+  difficulty: 'moderate'
+)
+chalfont.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'Chalfont_circular_hike.jpg')),
+  filename: 'Chalfont_circular_hike.jpg',
+  content_type: 'image.png'
+)
 chalfont.save!
-daffodils = Activity.new(name: 'Daffodils of Chartwell 20 Km Hike',
-  description: "After cold and dark winter, vibrant yellow daffodils are symbol of spring which can be easily found in English counytryside. This is a leisurely circular hike from Hurst Green Station via Chartwell; Churchill's country house in Kent and is now preserved as an historic property by the National Trust. It is consistently one of their most visited sites with beautiful dispaly of daffodils in especially in March. Another highlight is Octavia Hill; co founder of National Trust, lived at Larkfield in Crockham Hill. She was an conservationist, a social reformer known to protect green spaces and communities access to Nature. Photo Credit : David Fenton",
-  difficulty: 'difficult')
-  daffodils.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'Daffodils_of_chartwell.jpg')), filename: 'Daffodils_of_chartwell.jpg', content_type: 'image.png')
-daffodils.save!

@@ -1,14 +1,3 @@
-@keyframes likeAnimation {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-/* Apply the animation to the like button */
-.like-button.clicked {
-  animation: likeAnimation 0.5s ease;
-}
-
 .activity-actions {
   display: flex;
   justify-content: space-between;
@@ -24,9 +13,7 @@
 .dislike-button {
   width: 60px; /* Increase width for larger buttons */
   height: 60px; /* Increase height for larger buttons */
-  //border: none;
   border-radius: 50px;
-  //cursor: pointer;
   font-size: 30px; /* Increase font size for larger text */
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -35,6 +22,8 @@
   justify-content: center;
   align-items: center;
   padding: 10px; /* Add padding for more space inside buttons */
+  position: relative; /* Required for absolute positioning of bubbles */
+  overflow: hidden; /* Hide overflowing bubbles */
 }
 
 .like-button {
@@ -46,6 +35,7 @@
 .dislike-button {
   background-color: #f44336;
   color: white;
+  text-decoration: none;
 }
 
 .like-button:hover {
@@ -59,4 +49,43 @@
 /* Switch position of the dislike button */
 .dislike-button {
   order: -1;
+}
+
+.like-button:active {
+  transform: scale(1.05); /* Increase the scale value to make it slightly bigger */
+  transition: transform 0.2s ease; /* Add transition to smoothly animate the change */
+}
+
+
+/* Bubbles animation */
+
+.like-button::after {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+  opacity: 0; /* Initially hide the bubbles */
+  transition: opacity 0.5s ease; /* Add transition to smoothly animate opacity */
+}
+
+.like-button:active::after {
+  opacity: 1; /* Show bubbles when like button is clicked */
+  animation: bubbles 1.5s ease forwards; /* Start bubbles animation */
+}
+
+@keyframes bubbles {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
 }

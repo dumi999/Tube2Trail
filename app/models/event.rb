@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
-  belongs_to :user
+  has_many :participants
+  has_many :users, through: :participants
   belongs_to :activity # Use singular form since it's a belongs_to association
   validates :date, presence: true
   # has_many :participants

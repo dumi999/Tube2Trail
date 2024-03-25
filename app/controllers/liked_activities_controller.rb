@@ -1,10 +1,10 @@
 class LikedActivitiesController < ApplicationController
-
   def create
     @liked_activity = current_user.liked_activities.new(activity_id: params[:activity_id])
     @liked_activity.liked = params[:liked] == 'true'
     if @liked_activity.save
       flash[:success] = "Activity liked successfully!"
+      create_chatroom_for_activity(@liked_activity.activity)
     else
       flash[:error] = @liked_activity.errors.full_messages.to_sentence
     end
@@ -22,9 +22,11 @@ class LikedActivitiesController < ApplicationController
     redirect_to_next_or_activities_path(next_activity)
   end
 
-
-
   private
+
+  def create_chatroom_for_activity(activity)
+    Chatroom.create(activity: activity)
+  end
 
   def redirect_to_next_activity
     next_activity = Activity.where("id > ?", params[:activity_id]).first

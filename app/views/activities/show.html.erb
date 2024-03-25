@@ -27,11 +27,11 @@
         <% end %>
       </div>
 
-      <p class="activity-difficulty">Difficulty: <%= @activity.difficulty %></p>
+      <p class="activity-difficulty">difficulty: <%= @activity.difficulty %></p>
 
       <div class="activity-actions">
         <%= link_to activity_liked_activities_path(@activity, liked: true), data: {turbo_method: :post, action: 'click->activities#likeActivity', 'activity-id': @activity.id  }, class: 'like-button' do %>
-         <i class="fa-solid fa-shoe-prints"></i>
+         <i class="fa-solid fa-person-hiking"></i>
         <% end %>
 
         <%= link_to activity_liked_activities_path(@activity, liked: false), data: { turbo_method: :post, action: 'click->activities#dislikeActivity', 'activity-id': @activity.id }, class: 'dislike-button' do %>

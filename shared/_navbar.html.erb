@@ -1,0 +1,47 @@
+<div class="navbar top-nav">
+  <div class="container-fluid">
+    <!-- Logo in the middle of the navbar -->
+    <a class="navbar-brand" href="<%= root_path %>">
+      <%= image_tag("yl.png", alt: "Messages", class: "logo") %>
+    </a>
+
+    <!-- Toggle button for collapsed navbar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar items, (still need to add more) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Events", events_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Calendar", events_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= button_to "Log Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-bottom fixed-bottom">
+  <div class="container">
+  <%= link_to chatrooms_path do %>
+    <%= image_tag("msg2w.png", alt: "Messages", class: "navbar-image bottom-item") %>
+  <% end %>
+  <%= link_to root_path do %>
+    <%= image_tag("homewh.png", alt: "Home", class: "navbar-image bottom-item") %>
+  <% end %>
+ <%= link_to profile_path do %>
+    <%= image_tag("profilewhte.png", alt: "Profile", class: "navbar-image bottom-item") %> <!-- prfw.png also good icon -->
+  <% end %>  </div>
+</nav>

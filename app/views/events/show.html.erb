@@ -30,15 +30,22 @@
 </div>
 <%# mapbox with starting point marker %>
 <%# where and when info %>
+<%# date and time situated in top right of mapbox %>
+<div class="where-and-when">
 <div class="events-map" style="width: 100%; height: 350px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+<div class="date-overlay">
+  <span class="day"><%= @event.date.strftime("%d") %></span>
+  <span class="month"><%= @event.date.strftime("%b") %></span>
+</div>
+</div>
 </div>
 
 
-<%# date and time situated in top right of mapbox %>
+
 
 
 

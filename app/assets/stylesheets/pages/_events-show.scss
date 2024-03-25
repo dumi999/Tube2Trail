@@ -100,3 +100,35 @@
   border-radius: 16px;
   margin-bottom: 24px;
 }
+
+.where-and-when {
+  position: relative;
+}
+
+.date-overlay {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(58, 87, 67, 1);
+  position: absolute;
+  top: -36px;
+  right: -10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 5px solid rgba(58, 87, 67, 1);
+  height: 112px;
+  width: 112px;
+  text-align: center;
+
+  .day {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .month {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}

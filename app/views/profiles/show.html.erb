@@ -31,17 +31,17 @@
 <div class="liked-activities-container">
   <div class="container">
   <p><strong>Liked Activities:</strong> <%= @user.description %></p>
-  <a class="btn btn-ghost" href="#">Rowing</a>
-  <a class="btn btn-ghost" href="#">Hiking</a>
-  <a class="btn btn-ghost" href="#">Biking</a>
-  <a class="btn btn-ghost" href="#">Camping</a>
-  <a class="btn btn-ghost" href="#">Kayaking</a>
-  <a class="btn btn-ghost" href="#">Sailing</a>
-  <a class="btn btn-ghost" href="#">Snowboarding</a>
+  <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Rowing</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Hiking</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Biking</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Camping</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Kayaking</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Sailing</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Snowboarding</a>
   </div>
   <div class="lastbuttons">
-  <a class="btn btn-ghost" href="#">Fishing</a>
-  <a class="btn btn-ghost" href="#">Swimming</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Fishing</a>
+    <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Swimming</a>
   </div>
   <p class = "recent" ><strong>Recent Activities:</strong>
   <div class="avatar-circle-container">
@@ -50,14 +50,24 @@
   <div class="avatar-circle"></div>
 </div>
 <div class="card-container">
-    <div class="tiny-card"><strong>M</strong></div>
-    <div class="tiny-card"><strong>T</strong></div>
-    <div class="tiny-card"><strong>W</strong></div>
-    <div class="tiny-card"><strong>T</strong></div>
-    <div class="tiny-card"><strong>F</strong></div>
-    <div class="tiny-card"><strong>S</strong></div>
-    <div class="tiny-card"><strong>S</strong></div>
+    <div class="tiny-card" onclick="openModal('Monday')"><strong>M</strong></div>
+    <div class="tiny-card" onclick="openModal('Tuesday')"><strong>T</strong></div>
+    <div class="tiny-card" onclick="openModal('Wednesday')"><strong>W</strong></div>
+    <div class="tiny-card" onclick="openModal('Thursday')"><strong>T</strong></div>
+    <div class="tiny-card" onclick="openModal('Friday')"><strong>F</strong></div>
+    <div class="tiny-card" onclick="openModal('Saturday')"><strong>S</strong></div>
+    <div class="tiny-card" onclick="openModal('Sunday')"><strong>S</strong></div>
 </div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="close-container">
+      <span class="close" onclick="closeModal()">&times;</span>
+    </div>
+    <p id="modal-text">Calendar</p>
+  </div>
+</div>
+
 
 </div>
 
@@ -65,17 +75,159 @@
   <div class="containerjourneys">
     <p><strong>My Journeys:</strong></p>
     <div class="card-container">
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card1')">
+        <img class="card-image-preview" id="card1" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card2')">
+        <img class="card-image-preview" id="card2" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card3')">
+        <img class="card-image-preview" id="card3" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card4')">
+        <img class="card-image-preview" id="card4" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card5')">
+        <img class="card-image-preview" id="card5" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card6')">
+        <img class="card-image-preview" id="card6" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card7')">
+        <img class="card-image-preview" id="card7" src="#" alt="Preview Image">
+      </div>
+      <div class="card">
+        <div class="add-image-button" onclick="triggerFileInput(this)">
+          <span class="plus-sign">+</span>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImage(this, 'card8')">
+        <img class="card-image-preview" id="card8" src="#" alt="Preview Image">
+      </div>
     </div>
   </div>
 </div>
+
+
+
+
+<script>
+ window.addEventListener('load', function() {
+  loadImages();
+});
+
+function loadImages() {
+  try {
+    for (var i = 1; i <= 8; i++) {
+      var cardId = 'card' + i;
+      var imageData = sessionStorage.getItem(cardId);
+      var imagePreview = document.getElementById(cardId);
+      var addButton = imagePreview.nextElementSibling;
+
+      if (imagePreview) {
+        imagePreview.style.display = 'none';
+        addButton.style.display = 'none';
+
+        if (imageData) {
+          var tempImage = new Image();
+          tempImage.onload = function() {
+            imagePreview.src = imageData;
+            imagePreview.style.display = 'block';
+            addButton.style.display = 'none';
+          };
+          tempImage.src = imageData;
+        }
+      }
+    }
+  } catch (e) {
+    console.error('Error loading images:', e);
+  }
+}
+
+function previewImage(input, cardId) {
+  var card = input.closest('.card');
+  var imagePreview = card.querySelector('.card-image-preview');
+  var addButton = card.querySelector('.add-image-button');
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      imagePreview.src = e.target.result;
+      imagePreview.style.display = 'block';
+      addButton.style.display = 'none';
+      saveImage(cardId, e.target.result);
+    };
+    reader.onerror = function(e) {
+      console.error('Error reading file:', e.target.error);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+
+function saveImage(cardId, imageData) {
+  try {
+    sessionStorage.setItem(cardId, imageData);
+  } catch (e) {
+    console.error('Error saving image:', e);
+  }
+}
+
+window.addEventListener('beforeunload', function() {
+  try {
+    for (var i = 1; i <= 8; i++) {
+      var cardId = 'card' + i;
+      var imagePreview = document.getElementById(cardId);
+      if (imagePreview && imagePreview.src !== '#') {
+        saveImage(cardId, imagePreview.src);
+      }
+    }
+  } catch (e) {
+    console.error('Error saving images before unload:', e);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var addImageButtons = document.querySelectorAll('.add-image-button');
+  addImageButtons.forEach(function(addImageButton) {
+    addImageButton.addEventListener('click', function() {
+      var input = this.parentElement.querySelector('input[type="file"]');
+      if (input) {
+        input.click();
+      }
+    });
+  });
+});
+</script>
+
+
 
 <script>
 document.addEventListener('click', function(event) {
@@ -98,15 +250,13 @@ function makeEditable() {
   editArea.maxLength = '180';
   editArea.value = description;
 
-  // Replace the content with the textarea
   aboutMeContent.innerHTML = '';
   aboutMeContent.appendChild(editArea);
 
   editArea.focus();
   editArea.addEventListener('blur', function() {
-    // Restore the original content
     aboutMeContent.textContent = editArea.value;
-    saveDescription(editArea.value); // Call saveDescription with the updated value
+    saveDescription(editArea.value);
   });
 }
 
@@ -114,7 +264,6 @@ function saveDescription(description) {
   localStorage.setItem('aboutMeDescription', description);
 }
 
-// Function to load the saved input data from localStorage
 function loadDescription() {
   var savedDescription = localStorage.getItem('aboutMeDescription');
   var aboutMeContent = document.getElementById('about-me-content');
@@ -125,11 +274,32 @@ function loadDescription() {
 
 loadDescription();
 
-// Event listener to save the input data when leaving the page
 window.addEventListener('beforeunload', function() {
   var editArea = document.getElementById('edit-about-me');
   if (editArea) {
     saveDescription(editArea.value);
   }
 });
+</script>
+
+<script>
+  function toggleSelected(event, button) {
+    event.preventDefault();
+    button.classList.toggle('selected');
+  }
+</script>
+
+<script>
+function openModal(text) {
+  var modalText = document.getElementById('modal-text');
+  modalText.textContent = text;
+
+  var modal = document.getElementById('modal');
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  var modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
 </script>

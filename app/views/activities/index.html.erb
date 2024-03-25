@@ -1,8 +1,8 @@
 <div class="activities-container">
   <% @activities.each do |activity| %>
     <div class="activity-card" data-controller='activities-text'>
-      <% if activity.image_key %>
-        <%= cl_image_tag(activity.image_key, { alt: "Activity Cover", class: "activity-image" }) %>
+      <% if activity.image.attached? %>
+        <%= cl_image_tag(activity.image.key, { alt: "Activity Cover", class: "activity-image" }) %>
       <% else %>
         <p class="no-image">No Image Available</p>
       <% end %>

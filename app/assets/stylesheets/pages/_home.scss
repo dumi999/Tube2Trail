@@ -27,14 +27,19 @@
 #get-started-btn {
   background-color: #6b9b7b;
   color: #e3f3ec;
-  padding: 13px 18px;
+  padding: 17px 20px;
   border: none;
   border-radius: 10px;
-  font-size: 17px;
+  font-size: 25px;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 #get-started-btn:hover {
   background-color: #0b2215;
+}
+
+#get-started-btn:active {
+  transform: scale(0.96);
 }

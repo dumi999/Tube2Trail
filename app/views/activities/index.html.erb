@@ -1,8 +1,8 @@
 <div class="activities-container">
   <% @activities.each do |activity| %>
     <div class="activity-card" data-controller='activities-text'>
-      <% if activity.cover_image.attached? %>
-        <%= cl_image_tag activity.cover_image.key,  alt: "Activity Cover", class: "activity-image" %>
+      <% if activity.image.attached? %>
+        <%= cl_image_tag(activity.image.key, { alt: "Activity Cover", class: "activity-image" }) %>
       <% else %>
         <p class="no-image">No Image Available</p>
       <% end %>
@@ -11,7 +11,7 @@
         <p class="activity-name"><%= activity.name %></p>
         <div class="activity-description">
           <!-- Display partial description -->
-          <p data-activities-text-target='shortText'><%= truncate(activity.description, length: 100) %></p>
+          <p data-activities-text-target='shortText'><%= truncate(activity.description, length: 0) %></p>
 
           <!-- Toggle full description -->
           <p class="full-description" style="display: none;" data-activities-text-target='fullText'><%= activity.description %>
@@ -19,28 +19,42 @@
               <a href="#" class="view-less-link" data-action='click->activities-text#viewLess'><i class="fa-solid fa-chevron-up"></i></a>
             </span></p>
 
-          <% if activity.description.length > 100 %>
+          <% if activity.description.length > 0 %>
             <span class="read-more">
               <a href="#" class="view-more-link" data-action='click->activities-text#viewMore'><i class="fa-solid fa-chevron-down"></i></a>
             </span>
           <% end %>
 
         </div>
-        <p class="activity-difficulty">Difficulty: <%= activity.difficulty %></p>
+        <p class="activity-difficulty">difficulty: <%= activity.difficulty %></p>
 
 
         <div class="activity-actions">
 
-        <%= link_to activity_liked_activities_path(activity), data: {turbo_method: :post, action: 'click->activities#likeActivity', 'activity-id': activity.id  }, class: 'like-button' do %>
-         <i class="fa-solid fa-shoe-prints"></i>
+        <%= link_to activity_liked_activities_path(activity, liked: true), data: {turbo_method: :post, action: 'click->activities#likeActivity', 'activity-id': activity.id  }, class: 'like-button' do %>
+         <i class="fa-solid fa-person-hiking"></i>
         <% end %>
 
-
-
-           <button class="dislike-button" data-action='click->activities#dislikeActivity' data-activity-id="<%= activity.id %>">
-            <i class="fa-solid fa-x"></i> <!-- Icon for disliking -->
-          </button>
+        <%= link_to activity_liked_activities_path(activity, liked: false), data: { turbo_method: :post, action: 'click->activities#dislikeActivity', 'activity-id': activity.id }, class: 'dislike-button' do %>
+          <i class="fa-solid fa-x"></i>
+        <% end %>
       </div>
     </div>
   <% end %>
+</div>
+
+<div data-controller="welcome-modal" class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="welcomeModalLabel">Welcome to Activities Navigator!</h5>
+      </div>
+      <div class="modal-body">
+         On this page, you can select activities to join a chatroom by clicking on the hiker icon! Happy hiking!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary dismiss" data-dismiss="modal"><i class="fa-solid fa-person-hiking"></i></button>
+      </div>
+    </div>
+  </div>
 </div>

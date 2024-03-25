@@ -1,11 +1,18 @@
 <div class="chatrooms-show">
   <div class="banner banner-show-page">
-    <%= image_tag("pennine_banner.jpeg", class: "banner-image") %>
+    <%= image_tag("helvellyn.png", class: "banner-image") %>
     <h1><%= @activity.name %></h1>
     <div class="create-event-btn">
-      <%= link_to new_event_path do %>
-        <i class="fa-solid fa-person-hiking"></i>
-      <% end %>
+      <% existing_event = Event.find_by(activity_id: @activity.id) %>
+  <% if existing_event %>
+    <%= link_to event_path(existing_event) do %>
+      <i class="fa-solid fa-person-hiking"></i>
+    <% end %>
+  <% else %>
+    <%= link_to new_event_path(activity_id: @activity.id) do %>
+      <i class="fa-solid fa-person-hiking"></i>
+    <% end %>
+  <% end %>
     </div>
   </div>
 

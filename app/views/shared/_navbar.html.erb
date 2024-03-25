@@ -37,11 +37,13 @@
 
 <nav class="navbar navbar-bottom fixed-bottom">
   <div class="container">
+  <%= link_to chatrooms_path do %>
     <%= image_tag("msg2w.png", alt: "Messages", class: "navbar-image bottom-item") %>
-      <%= link_to root_path do %>
-      <%= image_tag("homewh.png", alt: "Home", class: "navbar-image bottom-item") %>
-    <% end %>
+  <% end %>
+  <%= link_to root_path do %>
+    <%= image_tag("homewh.png", alt: "Home", class: "navbar-image bottom-item") %>
+  <% end %>
  <%= link_to profile_path do %>
-      <%= image_tag("profilewhte.png", alt: "Profile", class: "navbar-image bottom-item") %> <!-- prfw.png also good icon -->
-    <% end %>  </div>
+    <%= image_tag("profilewhte.png", alt: "Profile", class: "navbar-image bottom-item") %> <!-- prfw.png also good icon -->
+  <% end %>  </div>
 </nav>

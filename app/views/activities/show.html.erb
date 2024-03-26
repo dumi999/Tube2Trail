@@ -1,13 +1,8 @@
 <div class="activities-container">
   <div class="activity-card" data-controller='activities-text'>
     <div class="activity-image">
-<<<<<<< HEAD
       <% if @activity.image[0].present? %>
         <%= cl_image_tag(@activity.image[0].key, { alt: "Activity Cover", class: "activity-image" }) %>
-=======
-      <% if @activity.image.attached? %>
-        <%= cl_image_tag(@activity.image.key, { alt: "Activity Cover", class: "activity-image" }) %>
->>>>>>> front_end_activities
       <% else %>
         <p class="no-image">No Image Available</p>
       <% end %>

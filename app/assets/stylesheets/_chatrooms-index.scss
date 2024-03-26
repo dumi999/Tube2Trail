@@ -1,0 +1,119 @@
+.content {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+}
+
+.cards-container {
+  width: 100%;
+}
+
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card.article-card {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  margin: 0;
+  width: calc(100% - 2px);
+  height: auto;
+  border-radius: 0;
+  display: flex;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  margin-right: 20px;
+}
+
+.avatar-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.card-details {
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.card-details strong {
+  font-size: 22px;
+  display: block;
+}
+
+.card-details span {
+  font-size: 16px;
+  color: #666;
+}
+
+.card-details p {
+  font-size: 16px;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+  padding: 10px 0;
+  position: relative;
+}
+
+.tabs-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 30px;
+  background-color: #acacac;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.tab:hover {
+  color: #333;
+}
+
+.tab.active {
+  color: black;
+  position: relative;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #333;
+}
+
+.search-bar {
+  background-color: #ddd;
+  padding: 10px 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+}

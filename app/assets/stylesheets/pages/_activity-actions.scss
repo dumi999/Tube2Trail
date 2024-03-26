@@ -24,12 +24,18 @@
   padding: 10px; /* Add padding for more space inside buttons */
   position: relative; /* Required for absolute positioning of bubbles */
   overflow: hidden; /* Hide overflowing bubbles */
+  //background-repeat: no-repeat;
+
 }
 
 .like-button {
   background-color: #4caf50;
   color: white;
   text-decoration: none;
+  // background-image: radial-gradient(circle, #1c671e 20%, transparent 20%),
+  //  radial-gradient(circle, transparent 20%,  #1c671e 20%, transparent 20%);
+  // background-size: 15% 15%, 25% 25%;
+  // background-position: 5% 90%, 10% 90%;
 }
 
 .dislike-button {

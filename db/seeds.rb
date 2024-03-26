@@ -1,5 +1,6 @@
 Event.destroy_all
 LikedActivity.destroy_all
+Message.destroy_all
 Chatroom.destroy_all
 Activity.destroy_all
 
@@ -86,3 +87,27 @@ chalfont.image.attach(
 )
 chalfont.save!
 
+# Please keep these users:
+# # Seed 1
+# User.create!(
+#   username: "alice",
+#   email: "alice@example.com",
+#   password: "password123",
+#   password_confirmation: "password123"
+# )
+
+# # Seed 2
+# User.create!(
+#   username: "bob",
+#   email: "bob@example.com",
+#   password: "securepassword",
+#   password_confirmation: "securepassword"
+# )
+
+# # Seed 3
+# User.create!(
+#   username: "charlie",
+#   email: "charlie@example.com",
+#   password: "charlie123",
+#   password_confirmation: "charlie123"
+# )

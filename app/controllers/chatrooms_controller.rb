@@ -2,7 +2,10 @@ class ChatroomsController < ApplicationController
   before_action :set_chatroom, only: [:show]
 
   def index
-    @chatrooms = Chatroom.all
+    @activities = current_user.activities_liked
+    @chatrooms = @activities.map do |activity|
+      activity.chatroom
+    end
   end
 
   def show

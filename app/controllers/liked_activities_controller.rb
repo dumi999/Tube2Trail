@@ -25,7 +25,8 @@ class LikedActivitiesController < ApplicationController
   private
 
   def create_chatroom_for_activity(activity)
-    Chatroom.create(activity: activity)
+    @chatroom = Chatroom.find_by(activity: activity)
+    Chatroom.create(activity: activity) unless @chatroom
   end
 
   def redirect_to_next_activity

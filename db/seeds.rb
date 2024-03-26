@@ -6,6 +6,57 @@ Message.destroy_all
 Chatroom.destroy_all
 Activity.destroy_all
 
+swc = Activity.new(
+  name: 'South West Coast Path',
+  description: "The South West Coast Path is England's longest waymarked long-distance footpath and a National Trail. It stretches for 630 miles, running from Minehead in Somerset, along the coasts of Devon and Cornwall, to Poole Harbour in Dorset.",
+  difficulty: 'extreme', address: "Minehead, Somerset"
+)
+
+swc.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'swc.png')),
+  filename: 'swc.png',
+  content_type: 'image.png'
+)
+
+swc.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'swc2.png')),
+  filename: 'swc2.png',
+  content_type: 'image/png'
+)
+
+swc.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'swc3.png')),
+  filename: 'swc3.png',
+  content_type: 'image/png'
+)
+swc.save!
+
+kinder = Activity.new(
+  name: 'Kinder Scout',
+  description: "The Kinder Scout Walk is a great trail in the Peak District. Despite being the Dark Peaks' most physically demanding terrain the Kinder Plateau, with its deep cloughs, dramatic edges and peaty trails, has an alluring charm that brings walkers back again and again.",
+  difficulty: 'difficult', address: "S33 7ZA
+  England"
+)
+
+kinder.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder.png')),
+  filename: 'kinder.png',
+  content_type: 'image.png'
+)
+
+kinder.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder2.png')),
+  filename: 'kinder2.png',
+  content_type: 'image/png'
+)
+
+kinder.image.attach(
+  io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder3.png')),
+  filename: 'kinder3.png',
+  content_type: 'image/png'
+)
+kinder.save!
+
 thailand_hike = Activity.new(
   name: 'Thai Wildlife Tour',
   description: "Embark on an unforgettable wildlife watching and hiking adventure in the lush wilderness of Thailand. Immerse yourself in the vibrant ecosystems of this tropical paradise as you trek through verdant rainforests and pristine landscapes. With each step, discover a rich tapestry of biodiversity, from colorful bird species flitting amongst the canopy to elusive mammals roaming the forest floor. Guided by experienced naturalists, learn about the intricate balance of these ecosystems and the importance of conservation efforts to protect Thailand's precious wildlife. Along the way, pause to admire breathtaking vistas, cascading waterfalls, and hidden gems tucked away in the heart of nature. After a day of exploration, unwind in comfortable accommodations nestled amidst the wilderness, where the

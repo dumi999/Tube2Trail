@@ -15,6 +15,7 @@
           <div class="card article-card">
             <div class="card-content">
               <div class="avatar-wrapper">
+
                 <% if chatroom.activity.images.attached? %>
 
                   <%= cl_image_tag(chatroom.activity.images[0].key, { alt: "Activity Avatar", class: "avatar-image" }) %>

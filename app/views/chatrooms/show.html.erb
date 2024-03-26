@@ -1,6 +1,6 @@
 <div class="chatrooms-show">
   <div class="banner banner-show-page">
-    <%= image_tag("helvellyn.png", class: "banner-image") %>
+    <%= cl_image_tag(@activity.image[0].key, { alt: "Activity banner", class: "banner-image" }) %>
     <h1><%= @activity.name %></h1>
     <div class="create-event-btn">
       <% existing_event = Event.find_by(activity_id: @activity.id) %>
@@ -50,7 +50,7 @@
   </div>
 </div>
 </div>
-
+<%#
 <div data-controller="welcome-modal" class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -65,4 +65,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>

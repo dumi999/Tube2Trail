@@ -1,0 +1,134 @@
+.events-show-page {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+.event-h1{
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgba(58, 87, 67, 1);
+  font-size: 3em;
+}
+
+.event-h3{
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgba(58, 87, 67, 1);
+  font-size: 3em;
+}
+
+.event-collage {
+  // padding: 20px;
+  display: flex;
+}
+
+.event-large {
+  margin-right: 10px;
+  width: 50%;
+  overflow: hidden;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0px 2px 4px rgba(58, 87, 67, 0.3);
+}
+
+
+.event-smalls {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.event-smalls img {
+  max-width: 100%;
+  height: 48%;
+  padding-left: 4px;
+  border-radius: 16px;
+  // box-shadow: 0px 2px 4px rgba(58, 87, 67, 0.3)
+}
+
+.event-users {
+  font-family: "Mali", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: rgba(58, 87, 67, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.participants-list{
+  list-style: none;
+}
+
+.participant{
+  padding: 8px;
+}
+
+.join-btn{
+  background-color: #3A5743;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s ease;
+  width: 100%;
+
+  &:hover {
+    background-color: #2D4636;
+  }
+}
+
+.events-map{
+  margin-top: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.where-and-when {
+  position: relative;
+}
+
+.date-overlay {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(58, 87, 67, 1);
+  position: absolute;
+  top: -36px;
+  right: -10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  border: 5px solid rgba(58, 87, 67, 1);
+  height: 112px;
+  width: 112px;
+  text-align: center;
+
+  .day {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .month {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}

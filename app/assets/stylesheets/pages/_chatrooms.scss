@@ -2,6 +2,8 @@
   padding: 20px;
   background-color: white;
   padding-bottom: 130px;
+  align-content: center;
+  width: 430px;
 
   .banner {
     position: relative;
@@ -189,6 +191,12 @@
     margin: 0 auto;
   }
 
+  .simple-form {
+    width: 100%;
+    border-radius: 16px;
+    background-color: white;
+   }
+
   .mb-3 {
     width: 100%;
     border-radius: 16px;
@@ -199,6 +207,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: start;
   }
 
   .modal-content {

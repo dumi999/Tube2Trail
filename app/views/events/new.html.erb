@@ -1,12 +1,31 @@
-<%= simple_form_for @event do |f| %>
-  <div class="form-inputs">
-    <%= f.input :date %>
-    <%= f.input :creator %>
-    <%= f.input :user_id, input_html: { value: current_user.id }, as: :hidden %>
-    <%= f.input :activity_id, input_html: { value: @event.activity_id }, as: :hidden %>
-  </div>
+<div class="events-new">
 
-  <div class="form-actions">
-    <%= f.submit 'GO HIKING!' %>
+<h1>Adventure awaits...</h1>
+<div class="event-banner">
+  <%= image_tag("tube.png", class: "banner-image") %>
+</div>
+
+<div class="container-new">
+  <div class="new-event-form">
+    <%= simple_form_for @event do |f| %>
+      <div class="form-inputs">
+        <%= f.input :date,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+        <%= f.input :creator, input_html: { value: true }, as: :hidden %>
+        <%= f.input :user_id, input_html: { value: current_user.id }, as: :hidden %>
+        <%= f.input :activity_id, input_html: { value: @event.activity_id }, as: :hidden %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit 'GET OUTDOORS', class: "go-hiking-btn" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+
+<div class="event-banner">
+  <%= image_tag("trail.png", class: "banner-image") %>
+</div>
+
+</div>

@@ -8,7 +8,15 @@ class EventsController < ApplicationController
   def show
     @activity = @event.activity
     @chatroom = @event.activity.chatroom
+    @participants = @event.participants.includes(:user)
+
+    @markers = [{
+      lat: @activity.latitude,
+      lng: @activity.longitude,
+      marker_html: render_to_string(partial: "events/marker")
+    }]
   end
+
 
   def new
     @event = Event.new
@@ -32,6 +40,18 @@ class EventsController < ApplicationController
     @event.update(event_params)
     redirect_to event_path(@event)
   end
+
+  def create_participant
+    @event = Event.find(params[:id])
+    @participant = Participant.new(event: @event, user: current_user)
+
+    if @participant.save
+      redirect_to @event, notice: "You have joined the event successfully."
+    else
+      redirect_to @event, alert: "Failed to join the event."
+    end
+  end
+
 
   private
 

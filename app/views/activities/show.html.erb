@@ -1,6 +1,6 @@
 <div class="activities-container">
   <div class="activity-card" data-controller='activities-text'>
-    <div class="activity-image"
+    <div class="activity-image">
       <% if @activity.image.attached? %>
         <%= cl_image_tag(@activity.image.key, { alt: "Activity Cover", class: "activity-image" }) %>
       <% else %>

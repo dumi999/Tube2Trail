@@ -1,11 +1,22 @@
 <div class="activities-container">
-  <% @activities.each do |activity| %>
+<% if @activities.empty?%>
+<div class="caught-up-container">
+  <i class="fa-regular fa-circle-check fa-3x" style="color: #63E6BE;"></i>
+  <p class='caught-up-message'>You're all caught up!</p>
+  <p class='subheader-caught-up'> You've seen all the activities</p>
+  <%= link_to "View Chatrooms", chatrooms_path, class: "chatrooms-link" %>
+</div>
+
+
+ <% else %>
+ <% @activities.each do |activity| %>
     <div class="activity-card" data-controller='activities-text'>
       <% if activity.image.attached? %>
         <%= cl_image_tag(activity.image.key, { alt: "Activity Cover", class: "activity-image" }) %>
       <% else %>
         <p class="no-image">No Image Available</p>
       <% end %>
+
 
       <div class="activity-details">
         <p class="activity-name"><%= activity.name %></p>
@@ -41,4 +52,5 @@
       </div>
     </div>
   <% end %>
+ <% end %>
 </div>

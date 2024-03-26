@@ -8,7 +8,7 @@ class Activity < ApplicationRecord
   has_one :chatroom
   has_many :liked_activities
   has_many :users, through: :liked_activities
-  has_one_attached :image
+  has_many_attached :image
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 end

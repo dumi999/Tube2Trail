@@ -2,14 +2,14 @@
   <h1 class="event-h1">Ready for <%= @activity.name %>?</h1>
   <%# Ideally a collage of activity images %>
   <div class="event-collage">
-    <div class="event-large">
-      <%= image_tag "helvellyn1.png", alt: "hike photo" %>
-    </div>
-    <div class="event-smalls">
-      <%= image_tag "helvellyn2.png", alt: "hike photo" %>
-      <%= image_tag "helvellyn3.png", alt: "hike photo" %>
-    </div>
+  <div class="event-large">
+    <%= cl_image_tag(@activity.image[0].key, alt: "hike photo") %>
   </div>
+  <div class="event-smalls">
+    <%= cl_image_tag(@activity.image[1].key, alt: "hike photo") %>
+    <%= cl_image_tag(@activity.image[2].key, alt: "hike photo") %>
+  </div>
+</div>
   <%# try and display all of the users who have agreed to go %>
   <div class="event-users">
     <h3 class="event-h3">Who's going?</h3>

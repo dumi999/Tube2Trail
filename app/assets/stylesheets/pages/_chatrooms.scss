@@ -2,6 +2,8 @@
   padding: 20px;
   background-color: white;
   padding-bottom: 130px;
+  align-content: center;
+  width: 430px;
 
   .banner {
     position: relative;
@@ -199,6 +201,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: start;
   }
 
   .modal-content {
@@ -214,10 +217,12 @@
       font-weight: 400;
       font-style: normal;
       padding: 10px 20px;
+      width: 430px;
     }
 
     .modal-body {
       background-color: rgba(58, 87, 67, 0.65);
+      width: 430px;
     }
 
     .modal-header {
@@ -258,4 +263,12 @@
         color: white;
       }
     }
+  }
+
+  .container {
+    width: 430px;
+  }
+
+  #welcomeModal {
+    width: 430px;
   }

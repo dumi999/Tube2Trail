@@ -13,4 +13,10 @@ class User < ApplicationRecord
   has_many :events, through: :participants
   has_many :liked_activities
   has_many :activities, through: :liked_activities
+
+  def activities_liked
+    liked_activities.where(liked: true).map do |liked_activity|
+      liked_activity.activity
+    end
+  end
 end

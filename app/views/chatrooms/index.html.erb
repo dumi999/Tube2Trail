@@ -15,10 +15,12 @@
           <div class="card article-card">
             <div class="card-content">
               <div class="avatar-wrapper">
-                <% if chatroom.activity.image.attached? %>
-                  <%= cl_image_tag(chatroom.activity.image.key, { alt: "Activity Avatar", class: "avatar-image" }) %>
+                <% if chatroom.activity.images.attached? %>
+
+                  <%= cl_image_tag(chatroom.activity.images[0].key, { alt: "Activity Avatar", class: "avatar-image" }) %>
+
                 <% else %>
-                  <%= image_tag("default_avatar.png", alt: "Default Avatar", class: "avatar-image") %>
+                  <%= image_tag("Chalfont_circular_hike.jpg", alt: "Default Avatar", class: "avatar-image") %>
                 <% end %>
               </div>
               <div class="card-details">

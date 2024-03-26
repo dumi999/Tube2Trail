@@ -61,7 +61,8 @@ p.notice {
 
 /* Top Navbar */
 .navbar.top-nav {
-  background-color: #289832d4;
+  background-color:#27822ed4;
+
 
 
   .container-fluid {
@@ -138,21 +139,20 @@ p.notice {
 }
 
 .alert {
-  position: fixed; /* Set the position to fixed */
-  bottom: 100px; /* Adjust the distance from the bottom to create space for the navbar */
-  left: 50%; /* Center the alert horizontally */
-  transform: translateX(-50%); /* Center the alert horizontally */
-  z-index: 1000; /* Ensure the alert appears above other content */
-  width: 400px; /* Set the width of the alert */
-  padding: 15px; /* Add padding to the alert */
-  background-color: #b5ffb8; /* Set background color */
-  border: 1px solid #ccc; /* Add a border for visual distinction */
-  border-radius: 5px; /* Add border radius for rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for depth */
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 400px;
+  padding: 15px;
+  background-color: #b5ffb8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Adjust the position of the close button */
 .alert .close {
-  float: right; /* Move the close button to the right */
+  float: right;
   cursor: pointer;
 }

@@ -1,0 +1,80 @@
+.events-new {
+  padding: 20px;
+  width: 430px;
+  padding-bottom: 90px;
+}
+
+.event-banner {
+  width: 100%;
+  height: 219px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Protest Revolution", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      color: rgba(58, 87, 67, 1);
+      font-size: 3em;
+      text-align: center;
+      padding: 20px;
+      margin: 0px;
+}
+
+.new-event-form {
+  margin-bottom: 20px;
+}
+
+.container-new {
+  display: flex;
+  justify-content: center;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.event_date {
+  display: flex;
+  justify-content: center;
+}
+.go-hiking-btn {
+  background-color: #3A5743;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+
+  &:hover {
+    background-color: #2D4636;
+  }
+}
+
+.simple_form {
+  width: 390px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.form-label {
+  display: none;
+}
+
+.flatpickr-input {
+  height: 60px;
+  text-align: center;
+  background-color: rgba(58, 87, 67, 0.3) ;
+  border-radius: 16px;
+}

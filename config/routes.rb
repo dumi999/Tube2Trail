@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create]
-  resources :events, only: [:new, :create, :edit, :show, :index, :update]
+  resources :events, only: [:new, :create, :edit, :show, :index, :update] do
+    post 'create_participant', on: :member
+  end
+
   resources :activities, only: [:index, :show] do
     resources :liked_activities, only: [:create]
   end

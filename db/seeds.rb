@@ -64,19 +64,19 @@ thailand_hike = Activity.new(
   difficulty: 'moderate', address: "Bangkok, Thailand"
 )
 
-thailand_hike.image.attach(
+thailand_hike.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'thailand.png')),
   filename: 'thailand.png',
   content_type: 'image.png'
 )
 
-thailand_hike.image.attach(
+thailand_hike.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'thailand2.png')),
   filename: 'thailand2.png',
   content_type: 'image/png'
 )
 
-thailand_hike.image.attach(
+thailand_hike.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'thailand3.png')),
   filename: 'thailand3.png',
   content_type: 'image/png'
@@ -89,19 +89,19 @@ mountain_biking = Activity.new(
   difficulty: 'difficult', address: "Castleton, Derbyshire"
 )
 
-mountain_biking.image.attach(
+mountain_biking.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Biking-Peaks.png')),
   filename: 'Biking-Peaks.png',
   content_type: 'image.png'
 )
 
-mountain_biking.image.attach(
+mountain_biking.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Biking-Peaks2.png')),
   filename: 'Biking-Peaks2.png',
   content_type: 'image/png'
 )
 
-mountain_biking.image.attach(
+mountain_biking.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Biking-Peaks3.png')),
   filename: 'Biking-Peaks3.png',
   content_type: 'image/png'
@@ -114,19 +114,19 @@ kilimanjaro_climbing = Activity.new(
   difficulty: 'extreme', address: "Moshi, Tanzania"
 )
 
-kilimanjaro_climbing.image.attach(
+kilimanjaro_climbing.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kilimanjaro.png')),
   filename: 'kilimanjaro.png',
   content_type: 'image.png'
 )
 
-kilimanjaro_climbing.image.attach(
+kilimanjaro_climbing.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kilimanjaro2.png')),
   filename: 'kilimanjaro2.png',
   content_type: 'image/png'
 )
 
-kilimanjaro_climbing.image.attach(
+kilimanjaro_climbing.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kilimanjaro3.png')),
   filename: 'kilimanjaro3.png',
   content_type: 'image/png'
@@ -139,19 +139,19 @@ winter = Activity.new(
   difficulty: 'moderate', address: ' Henley-on-Thames'
 )
 
-winter.image.attach(
+winter.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'winter_hill.jpg')),
   filename: 'winter_hill.png',
   content_type: 'image.png'
 )
 
-winter.image.attach(
+winter.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'winter_hill2.png')),
   filename: 'winter_hill2.png',
   content_type: 'image/png'
 )
 
-winter.image.attach(
+winter.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'winter_hill3.png')),
   filename: 'winter_hill3.png',
   content_type: 'image/png'
@@ -162,19 +162,19 @@ helvellyn = Activity.new(name: 'Helvellyn',
   description: "The best walking route up Helvellyn is via Striding Edge. A narrow ridge that rises and falls with steep drops on either side. It tests the nerves, but the rewards are an adventure with breathtaking views and the satisfaction of climbing the third-highest peak in the Lakes.",
   difficulty: 'difficult', address: 'Keswick CA12 4TW')
 
-  helvellyn.image.attach(
+  helvellyn.images.attach(
     io: File.open(Rails.root.join('app', 'assets', 'images', 'helvellyn.png')),
     filename: 'helvellyn.png',
     content_type: 'image.png'
   )
 
-  helvellyn.image.attach(
+  helvellyn.images.attach(
     io: File.open(Rails.root.join('app', 'assets', 'images', 'helvellyn2.png')),
     filename: 'helvellyn2.png',
     content_type: 'image/png'
   )
 
-  helvellyn.image.attach(
+  helvellyn.images.attach(
     io: File.open(Rails.root.join('app', 'assets', 'images', 'helvellyn3.png')),
     filename: 'helvellyn3.png',
     content_type: 'image/png'
@@ -186,19 +186,19 @@ epping = Activity.new(
   description: "Embark on a mesmerizing circular hike through Epping Forest, immersing yourself in its timeless beauty. Traverse winding paths under towering oaks, discovering tranquil glades and meandering streams along the way. Encounter centuries-old trees and ancient settlements, while panoramic viewpoints offer breathtaking vistas of the forest canopy. Whether you're a seasoned hiker or a nature enthusiast, this unforgettable journey promises a rejuvenating escape into one of England's most cherished natural landscapes.",
   difficulty: 'easy', address: "6 High Beech Road, Loughton"
 )
-epping.image.attach(
+epping.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Epping_forest_hike.jpg')),
   filename: 'Epping_forest_hike.jpg',
   content_type: 'image.png'
 )
 
-epping.image.attach(
+epping.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Epping_forest_hike2.png')),
   filename: 'Epping_forest_hike2.png',
   content_type: 'image/png'
 )
 
-epping.image.attach(
+epping.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Epping_forest_hike3.png')),
   filename: 'Epping_forest_hike3.png',
   content_type: 'image/png'
@@ -210,19 +210,19 @@ chalfont = Activity.new(
   description: "Embark on a scenic hike through Chalfont, nestled in the picturesque Chilterns. Explore rolling hills, wooded valleys, and charming countryside. With moderate difficulty, enjoy sightings of wildlife and a cozy pub stop. Discover the beauty of nature on this enriching adventure in Chalfont.",
   difficulty: 'moderate', address: "Chalfont St Giles"
 )
-chalfont.image.attach(
+chalfont.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'Chalfont_circular_hike.jpg')),
   filename: 'Chalfont_circular_hike.jpg',
   content_type: 'image.png'
 )
 
-chalfont.image.attach(
+chalfont.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'chalfont2.png')),
   filename: 'chalfont2.png',
   content_type: 'image/png'
 )
 
-chalfont.image.attach(
+chalfont.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'chalfont3.png')),
   filename: 'chalfont3.png',
   content_type: 'image/png'

@@ -12,19 +12,19 @@ swc = Activity.new(
   difficulty: 'extreme', address: "Minehead, Somerset"
 )
 
-swc.image.attach(
+swc.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'swc.png')),
   filename: 'swc.png',
   content_type: 'image.png'
 )
 
-swc.image.attach(
+swc.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'swc2.png')),
   filename: 'swc2.png',
   content_type: 'image/png'
 )
 
-swc.image.attach(
+swc.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'swc3.png')),
   filename: 'swc3.png',
   content_type: 'image/png'
@@ -38,19 +38,19 @@ kinder = Activity.new(
   England"
 )
 
-kinder.image.attach(
+kinder.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder.png')),
   filename: 'kinder.png',
   content_type: 'image.png'
 )
 
-kinder.image.attach(
+kinder.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder2.png')),
   filename: 'kinder2.png',
   content_type: 'image/png'
 )
 
-kinder.image.attach(
+kinder.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder3.png')),
   filename: 'kinder3.png',
   content_type: 'image/png'

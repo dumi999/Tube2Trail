@@ -45,11 +45,15 @@
 }
 
 .like-button:hover {
-  background-color: #45a049;
+  background-color: #31a737;
+  transform: translate(3px);
+  transform: scale(1.15);
 }
 
 .dislike-button:hover {
   background-color: #d32f2f;
+  transform: translate(3px);
+  transform: scale(1.15);
 }
 
 /* Switch position of the dislike button */

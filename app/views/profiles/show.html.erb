@@ -4,10 +4,11 @@
     <div class="profile-info">
       <div class="avatar-container">
         <% if @user.photo.present? %>
-          <%= image_tag(@user.photo.url, alt: "Avatar", class: "avatar-img") %>
+         <%= image_tag(@user.photo.url, alt: "Avatar", class: "avatar-img") %>
         <% else %>
-          <div class="default-avatar"></div>
-        <% end %>
+         <%= image_tag("profile-placeholder.png", alt: "Avatar", class: "avatar-img") %>
+       <% end %>
+
       </div>
       <h1 class="profile-name"><strong><%= @user.username %></strong></h1>
     </div>

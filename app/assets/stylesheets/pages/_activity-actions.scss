@@ -45,11 +45,16 @@
 }
 
 .like-button:hover {
-  background-color: #45a049;
+  background-color: #31a737;
+  transform: translate(3px);
+  transform: scale(1.15);
+
 }
 
 .dislike-button:hover {
   background-color: #d32f2f;
+  transform: translate(3px);
+  transform: scale(1.15);
 }
 
 /* Switch position of the dislike button */
@@ -73,12 +78,12 @@
   background-color: green;
   border-radius: 50%;
   opacity: 0; /* Initially hide the bubbles */
-  transition: opacity 0.5s ease; /* Add transition to smoothly animate opacity */
+  transition: opacity 0.9s ease; /* Add transition to smoothly animate opacity */
 }
 
 .like-button:active::after {
   opacity: 1; /* Show bubbles when like button is clicked */
-  animation: bubbles 1.5s ease forwards; /* Start bubbles animation */
+  animation: bubbles 1.5s ease forwards, 1s ease-out; /* Start bubbles animation */
 }
 
 @keyframes bubbles {

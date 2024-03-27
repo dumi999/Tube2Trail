@@ -15,11 +15,16 @@
     <h3 class="event-h3">Who's going?</h3>
     <ul class="participants-list">
       <% @participants.each do |participant| %>
-        <li class="participant">
-          <%= cl_image_tag participant.user.photo.key, class: "avatar" %>
-          <%= participant.user.username %>
-        </li>
-      <% end %>
+  <li class="participant">
+    <% if participant.user.photo.present? %>
+      <%= cl_image_tag participant.user.photo.key, class: "avatar" %>
+    <% else %>
+      <%= image_tag("profile-placeholder.png", alt: "Avatar", class: "avatar") %>
+    <% end %>
+    <%= participant.user.username %>
+  </li>
+<% end %>
+
     </ul>
   </div>
   <%# Maybe have a join button if event already created? %>

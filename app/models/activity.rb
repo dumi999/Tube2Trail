@@ -1,5 +1,5 @@
 class Activity < ApplicationRecord
-  validates :difficulty, inclusion: { in: %w(easy moderate difficult extreme) }
+  validates :difficulty, inclusion: { in: %w(easy moderate challenging extreme) }
   validates :name, presence: true
   validates :description, presence: true
   validates :address, presence: true

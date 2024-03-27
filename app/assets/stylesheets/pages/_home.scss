@@ -1,6 +1,6 @@
 
 #splash-page {
-  background: linear-gradient(135deg, #0b2215, #6b9b7b); /* Gradient background */
+  background: linear-gradient(135deg, white, #9be6ba); /* Gradient background */
   color: #FFFFFF; /* White text color */
   font-family: "Proxima Nova", Arial, sans-serif;
   margin: 0;
@@ -37,14 +37,16 @@
 // }
 
 #subheader {
-  color: #c2e4d0;
+  color: #374a3f;
   padding-top: 30px;
   padding-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 17px;
   // font-family:"Proxima Nova", Arial, sans-serif;
 }
 
 #get-started-btn {
-  background-color: #6b9b7b;
+  background-color: #70a887;
   color: #e3f3ec;
   padding: 17px 20px;
   border: none;

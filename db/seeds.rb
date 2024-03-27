@@ -12,19 +12,19 @@ swc = Activity.new(
   difficulty: 'extreme', address: "Minehead, Somerset"
 )
 
-swc.image.attach(
+swc.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'swc.png')),
   filename: 'swc.png',
   content_type: 'image.png'
 )
 
-swc.image.attach(
+swc.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'swc2.png')),
   filename: 'swc2.png',
   content_type: 'image/png'
 )
 
-swc.image.attach(
+swc.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'swc3.png')),
   filename: 'swc3.png',
   content_type: 'image/png'
@@ -34,23 +34,23 @@ swc.save!
 kinder = Activity.new(
   name: 'Kinder Scout',
   description: "The Kinder Scout Walk is a great trail in the Peak District. Despite being the Dark Peaks' most physically demanding terrain the Kinder Plateau, with its deep cloughs, dramatic edges and peaty trails, has an alluring charm that brings walkers back again and again.",
-  difficulty: 'difficult', address: "S33 7ZA
+  difficulty: 'challenging', address: "S33 7ZA
   England"
 )
 
-kinder.image.attach(
+kinder.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder.png')),
   filename: 'kinder.png',
   content_type: 'image.png'
 )
 
-kinder.image.attach(
+kinder.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder2.png')),
   filename: 'kinder2.png',
   content_type: 'image/png'
 )
 
-kinder.image.attach(
+kinder.images.attach(
   io: File.open(Rails.root.join('app', 'assets', 'images', 'kinder3.png')),
   filename: 'kinder3.png',
   content_type: 'image/png'
@@ -86,7 +86,7 @@ thailand_hike.save!
 mountain_biking = Activity.new(
   name: 'Biking in the Peaks',
   description: "Experience the thrill of mountain biking through rugged terrain and breathtaking scenery on this adrenaline-fueled adventure. Our guided mountain biking tour takes you on an exhilarating journey through winding trails, challenging climbs, and thrilling descents in the heart of nature. Whether you're a seasoned pro or a beginner, our experienced guides will tailor the route to suit your skill level, ensuring an unforgettable experience for all. Along the way, you'll encounter stunning vistas, hidden gems, and wildlife encounters, making each twist and turn of the trail a new adventure. Bring your own bike or rent one from us, and get ready to pedal your way through an unforgettable mountain biking escapade.",
-  difficulty: 'difficult', address: "Castleton, Derbyshire"
+  difficulty: 'challenging', address: "Castleton, Derbyshire"
 )
 
 mountain_biking.images.attach(
@@ -160,7 +160,7 @@ winter.save!
 
 helvellyn = Activity.new(name: 'Helvellyn',
   description: "The best walking route up Helvellyn is via Striding Edge. A narrow ridge that rises and falls with steep drops on either side. It tests the nerves, but the rewards are an adventure with breathtaking views and the satisfaction of climbing the third-highest peak in the Lakes.",
-  difficulty: 'difficult', address: 'Keswick CA12 4TW')
+  difficulty: 'challenging', address: 'Keswick CA12 4TW')
 
   helvellyn.images.attach(
     io: File.open(Rails.root.join('app', 'assets', 'images', 'helvellyn.png')),

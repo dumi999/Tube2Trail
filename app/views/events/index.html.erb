@@ -1,1 +1,63 @@
-<h1>hi there</h1>
+<div class="content events-content">
+  <div class="tabs-container">
+    <a href="/chats" class="tab">Chats</a>
+    <a href="/events" class="tab active">Events</a>
+  </div>
+
+  <div class="search-bar">
+    <input type="text" id="search-input" placeholder="Search...">
+  </div>
+
+  <% if @events.any? %>
+  <div class="cards-container events-cards-container">
+    <% @events.each do |event| %>
+      <a href="<%= event_path(event) %>" class="card-link events-card-link">
+        <div class="events-article-card">
+          <div class="card-content events-card-content">
+            <div class="card-image events-card-image">
+              <% if event.activity.images.attached? %>
+                <%= cl_image_tag(event.activity.images[0].key, { alt: "Activity Avatar", class: "card-image" }) %>
+              <% else %>
+                <%= image_tag("default_image.jpg", alt: "Default Avatar", class: "card-image") %>
+              <% end %>
+              <div class="event-date-circle">
+                <%= event.date.strftime("%d") %>
+                <%= event.date.strftime("%b") %>
+              </div>
+            </div>
+            <div class="card-details events-card-details">
+              <strong><%= event.activity.name %></strong>
+            </div>
+          </div>
+        </div>
+      </a>
+    <% end %>
+  </div>
+<% else %>
+  <p>No events available.</p>
+<% end %>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $('#search-input').on('keyup', function() {
+    var searchText = $(this).val().toLowerCase();
+    $('.article-card').each(function() {
+      var activityName = $(this).find('.card-details strong').text().toLowerCase();
+      var activityDifficulty = $(this).find('.card-details span').text().toLowerCase();
+      var card = $(this);
+      if (activityName.includes(searchText) || activityDifficulty.includes(searchText)) {
+        card.show();
+      } else {
+        card.hide();
+      }
+    });
+  });
+});
+</script>

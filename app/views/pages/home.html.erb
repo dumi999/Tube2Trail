@@ -1,9 +1,25 @@
-
-<div>
-<div id='homepage'>
+<div id="homepage">
   <div class="header">
     <h1 class="title">Tube2Trail</h1>
-    <p id='subheader'>Your adventure awaits</p>
+  </div>
+  <!-- Image Containers -->
+  <div class="image-containers">
+    <!-- Hiking Main Image -->
+    <div class="hiking-homepage">
+      <h2>Discover new landscapes</h2>
+      <%= image_tag("hiking-main.jpg", alt: "Hiking Image", class: "image-homepage") %>
+    </div>
+
+    <!-- Hikers Image -->
+    <div class="hikers">
+      <h2>Form lasting connections</h2>
+      <%= image_tag("hikers.jpg", alt: "Hikers", class: "image-homepage") %>
+    </div>
+  </div>
+
+  <div class='homepage-link'>
+    <p id="subheader">Your adventure awaits</p>
     <%= link_to 'Get Started', activities_path, id: "get-started-btn" %>
+    <!-- Other content of the homepage goes here -->
   </div>
 </div>

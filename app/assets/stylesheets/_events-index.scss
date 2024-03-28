@@ -10,6 +10,9 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    &:first-child {
+      margin-top: 20px; /* Add margin only to the first card */
+    }
   }
 
   .events-card-content {
@@ -18,11 +21,12 @@
   }
 
   .events-card-image {
-    width: 100%;
+    width: calc(100% - 40px); /* Adjusted width with space on both sides */
     height: 200px;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+    margin: 0 20px; /* Added horizontal margins */
   }
 
   .events-card-image img {

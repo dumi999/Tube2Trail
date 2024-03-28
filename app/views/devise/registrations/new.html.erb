@@ -1,3 +1,4 @@
+<div class="login">
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -9,14 +10,17 @@
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
+  <%= 'Username' %>
     <%= f.input :username,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "username" }%>
+  <%= 'Password' %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
+   <%= 'Confirm Password' %>
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
@@ -30,3 +34,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<div class="login">

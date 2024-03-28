@@ -1,5 +1,5 @@
 
-#splash-page {
+#homepage {
   background: linear-gradient(135deg, white, #9be6ba); /* Gradient background */
   color: #FFFFFF; /* White text color */
   font-family: "Proxima Nova", Arial, sans-serif;
@@ -10,37 +10,29 @@
 
 }
 
-// .navbar.top-nav{
-//   display: none;
+
+// .logo-splash {
+//   width: 200px; /* Adjust the width as needed */
+//   height: auto; /* To maintain aspect ratio */
+//   display: block; /* Ensures the image behaves as a block element */
+//   margin: 0 auto; /* Centers the image horizontally */
+//   padding-top: 300px;
+//   padding-bottom: 30px;
+//   /* Add more styles as needed */
 // }
 
-// .navbar-bottom{
-//   display: none;
-// }
-
-
-.logo-splash {
-  width: 200px; /* Adjust the width as needed */
-  height: auto; /* To maintain aspect ratio */
-  display: block; /* Ensures the image behaves as a block element */
-  margin: 0 auto; /* Centers the image horizontally */
+.title {
+  color: #3d6b4f;
   padding-top: 300px;
-  padding-bottom: 30px;
-  /* Add more styles as needed */
+ // font-family: "Sharp Grotesk", sans-serif;
+  font-size: 60px;
 }
 
-// .title {
-//   color: #d0eedc;
-//   padding-top: 300px;
-//  // font-family: "Sharp Grotesk", sans-serif;
-//   font-size: xx-large;
-// }
-
 #subheader {
-  color: #374a3f;
+  color: #477058;
   padding-top: 30px;
   padding-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-size: 17px;
   // font-family:"Proxima Nova", Arial, sans-serif;
 }

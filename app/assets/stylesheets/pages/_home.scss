@@ -1,57 +1,36 @@
-
-#splash-page {
-  background: linear-gradient(135deg, white, #9be6ba); /* Gradient background */
-  color: #FFFFFF; /* White text color */
-  font-family: "Proxima Nova", Arial, sans-serif;
+/* Resetting default margin and padding */
+* {
   margin: 0;
   padding: 0;
-  min-height: 90vh;
-  text-align: center;
-
+  box-sizing: border-box;
 }
 
-// .navbar.top-nav{
-//   display: none;
-// }
-
-// .navbar-bottom{
-//   display: none;
-// }
-
-
-.logo-splash {
-  width: 200px; /* Adjust the width as needed */
-  height: auto; /* To maintain aspect ratio */
-  display: block; /* Ensures the image behaves as a block element */
-  margin: 0 auto; /* Centers the image horizontally */
-  padding-top: 300px;
-  padding-bottom: 30px;
-  /* Add more styles as needed */
+/* Body styles */
+body {
+  font-family: "Proxima Nova", Arial, sans-serif;
+  background-color: #f5f5f5; /* Light gray background */
 }
 
-// .title {
-//   color: #d0eedc;
-//   padding-top: 300px;
-//  // font-family: "Sharp Grotesk", sans-serif;
-//   font-size: xx-large;
-// }
+.title {
+  color: #549267;
+  padding-top: 15px;
+  font-family: "Crete Round", serif;
+  font-size: 50px;
+}
 
-#subheader {
-  color: #374a3f;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 17px;
-  // font-family:"Proxima Nova", Arial, sans-serif;
+.subheader {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: "Crete Round", serif;
 }
 
 #get-started-btn {
-  background-color: #70a887;
+  background-color: #6b9b7b;
   color: #e3f3ec;
-  padding: 17px 20px;
+  padding: 10px 20px; /* Smaller padding */
   border: none;
-  border-radius: 10px;
-  font-size: 25px;
+  border-radius: 5px; /* Smaller border radius */
+  font-size: 20px; /* Smaller font size */
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.2s ease;
@@ -63,4 +42,60 @@
 
 #get-started-btn:active {
   transform: scale(0.96);
+}
+
+/* Image containers */
+.image-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+
+/* Individual image container */
+.hiking-homepage,
+.hikers {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image styles */
+.image-homepage {
+  width: 400px;
+  border-radius: 10px;
+}
+
+/* Heading styles */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #324939;
+  font-family: "Crete Round", serif;
+}
+
+/* Homepage link styles */
+.homepage-link {
+  text-align: center;
+  margin-top: 0px;
+  background-color: white; /* Dark gray background */
+  padding: 0px; /* Increase padding for better visibility */
+}
+
+#subheader {
+  font-size: 1rem;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #324939;
+}
+
+#get-started-btn {
+  background-color: #6b9b7b;
+  color: #e3f3ec;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }

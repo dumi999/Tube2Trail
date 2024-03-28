@@ -39,7 +39,7 @@ class LikedActivitiesController < ApplicationController
     if next_activity
       redirect_to activity_path(next_activity)
     else
-      redirect_to activities_path, notice: "No next activity found."
+      redirect_to activities_path
     end
   end
 end

@@ -16,6 +16,6 @@ export default class extends Controller {
   viewLess() {
     this.shortTextTarget.style.display = "block";
     this.fullTextTarget.style.display = "none";
-    window.location.reload(); // Reload the page
+    window.location.reload();
   }
 }

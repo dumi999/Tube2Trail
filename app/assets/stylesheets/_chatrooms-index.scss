@@ -65,7 +65,7 @@
 .tabs-container {
   display: flex;
   justify-content: space-around;
-  background-color: #49aa3eaf;
+  background-color: #549267;
   padding: 10px 0;
   position: relative;
 }
@@ -85,7 +85,8 @@
   cursor: pointer;
   padding: 10px 20px;
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 24px;
 }
 
 .tab:hover {
@@ -93,7 +94,7 @@
 }
 
 .tab.active {
-  color: black;
+  color: white;
   position: relative;
 }
 

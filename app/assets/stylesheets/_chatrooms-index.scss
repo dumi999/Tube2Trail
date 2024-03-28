@@ -14,15 +14,17 @@
 }
 
 .card.article-card {
-  background-color: #91f097ad;
-  border-bottom: 1px solid #ddd;
+  background-color: #ffffff;
+  border: none;
   padding: 15px;
   margin: 0;
   width: calc(100% - 2px);
   height: auto;
   border-radius: 0;
   display: flex;
+  border-bottom: 1px solid rgb(103, 103, 103);
 }
+
 
 .card-content {
   display: flex;
@@ -61,7 +63,7 @@
 .tabs-container {
   display: flex;
   justify-content: space-around;
-  background-color: #f0f0f0;
+  background-color: #49aa3eaf;
   padding: 10px 0;
   position: relative;
 }
@@ -105,7 +107,7 @@
 }
 
 .search-bar {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 10px 20px;
 }
 
@@ -116,6 +118,7 @@
   border-radius: 20px;
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #f0f0f0;
 }
 
 .search-bar input[type="text"]:focus {

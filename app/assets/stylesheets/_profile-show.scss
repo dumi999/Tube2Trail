@@ -35,6 +35,7 @@ body {
   font-family:'arial';
   font-size: 30px;
   color: #000;
+  font-family:'work sans';
 }
 
 .description-container {
@@ -77,19 +78,19 @@ body {
 
 .btn-ghost {
   font-size: 14px;
-  color: #4a4a4a;
-  border: 1px solid #4a4a4a;
+  color: #000000;
+  border: 1px solid #000000;
   padding: 6px 10px;
   border-radius: 30px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 0.9;
   transition: opacity 0.3s ease;
   margin: 2px;
 }
 
 .btn-ghost:hover {
   opacity: 1;
-  background-color: #4a4a4a;
+  background-color: #388d4f;
   color: #ffffff;
 }
 
@@ -130,16 +131,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.5px solid black; /* Add a thin black border */
+  border: 0.5px solid black;
 }
 
 
 .avatar-circle img {
-  width: 100%; /* Ensure the image fills the entire width of the circle */
-  height: 100%; /* Ensure the image fills the entire height of the circle */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire circle */
-  object-position: center; /* Center the image within the circle */
-  border-radius: 50%; /* Ensure the image remains circular */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
 }
 
 
@@ -282,7 +283,7 @@ body {
 }
 
 .location {
-  margin-top: -15px; /* Adjusted margin */
+  margin-top: -15px;
   font-size: 18px;
   font-weight: 500;
   padding-top: -5px;

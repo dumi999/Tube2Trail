@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="activities-text"
 export default class extends Controller {
   static targets = ['shortText', 'fullText']
 
@@ -8,7 +7,6 @@ export default class extends Controller {
   }
 
   viewMore(event) {
-    // console.log(event)
     event.preventDefault();
     event.currentTarget.style.display = 'none';
     this.shortTextTarget.style.display = 'none';
@@ -18,7 +16,6 @@ export default class extends Controller {
   viewLess() {
     this.shortTextTarget.style.display = "block";
     this.fullTextTarget.style.display = "none";
-    this.readMoreTarget.style.display = "inline";
-    this.readLessTarget.style.display = "none";
+    window.location.reload(); // Reload the page
   }
 }

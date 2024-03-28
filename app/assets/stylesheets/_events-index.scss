@@ -1,6 +1,6 @@
 .events-content {
-  margin-bottom: 60px; /* Add a margin at the bottom */
-  font-family: "Proxima Nova", Arial, sans-serif;
+
+  margin-bottom: 60px;
 }
 
 .card-link {
@@ -15,7 +15,7 @@
   border-radius: 10px;
   overflow: hidden;
   &:first-child {
-    margin-top: 20px; /* Add margin only to the first card */
+    margin-top: 20px;
   }
 }
 
@@ -25,12 +25,12 @@
 }
 
 .events-card-image {
-  width: calc(100% - 40px); /* Adjusted width with space on both sides */
+  width: calc(100% - 40px);
   height: 200px;
   overflow: hidden;
   border-radius: 10px;
   position: relative;
-  margin: 0 20px; /* Added horizontal margins */
+  margin: 0 20px;
 }
 
 .events-card-image img {

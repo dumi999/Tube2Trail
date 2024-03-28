@@ -30,7 +30,11 @@ body {
 }
 
 .profile-name {
-  margin-top: 10px;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-family:'arial';
+  font-size: 30px;
+  color: #000;
 }
 
 .description-container {
@@ -120,9 +124,25 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  background-color: #fff;
   margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid black; /* Add a thin black border */
 }
+
+
+.avatar-circle img {
+  width: 100%; /* Ensure the image fills the entire width of the circle */
+  height: 100%; /* Ensure the image fills the entire height of the circle */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire circle */
+  object-position: center; /* Center the image within the circle */
+  border-radius: 50%; /* Ensure the image remains circular */
+}
+
+
 
 .card-container {
   display: flex;
@@ -262,7 +282,7 @@ body {
 }
 
 .location {
-  margin-bottom: 10px;
+  margin-top: -15px; /* Adjusted margin */
   font-size: 18px;
   font-weight: 500;
   padding-top: -5px;

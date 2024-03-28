@@ -48,14 +48,14 @@
 $(document).ready(function() {
   $('#search-input').on('keyup', function() {
     var searchText = $(this).val().toLowerCase();
-    $('.events-article-card').each(function() {
-      var eventName = $(this).find('.card-details strong').text().toLowerCase();
-      var eventDate = $(this).find('.event-date-circle').text().toLowerCase();
+    $('.article-card').each(function() {
+      var activityName = $(this).find('.card-details strong').text().toLowerCase();
+      var activityDifficulty = $(this).find('.card-details span').text().toLowerCase();
       var card = $(this);
-      if (eventName.includes(searchText) || eventDate.includes(searchText)) {
-        card.parent().show(); // Show the parent card-link if any content matches
+      if (activityName.includes(searchText) || activityDifficulty.includes(searchText)) {
+        card.show();
       } else {
-        card.parent().hide(); // Hide the parent card-link if no content matches
+        card.hide();
       }
     });
   });

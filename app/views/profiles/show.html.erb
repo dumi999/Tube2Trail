@@ -45,11 +45,18 @@
     <a class="btn btn-ghost" href="#" onclick="toggleSelected(event, this)">Swimming</a>
   </div>
   <p class = "recent" ><strong>Recent Activities:</strong>
-  <div class="avatar-circle-container">
-  <div class="avatar-circle"></div>
-  <div class="avatar-circle"></div>
-  <div class="avatar-circle"></div>
+<div class="avatar-circle-container">
+  <div class="avatar-circle">
+    <%= image_tag("kilimanjaro.png", alt: "Avatar 1") %>
+  </div>
+  <div class="avatar-circle">
+    <%= image_tag("thailand.png", alt: "Avatar 2") %>
+  </div>
+  <div class="avatar-circle">
+    <%= image_tag("pennine_banner.jpeg", alt: "Avatar 3") %>
+  </div>
 </div>
+
 <div class="card-container">
     <div class="tiny-card" onclick="openModal('Monday')"><strong>M</strong></div>
     <div class="tiny-card" onclick="openModal('Tuesday')"><strong>T</strong></div>

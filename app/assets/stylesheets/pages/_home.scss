@@ -56,7 +56,7 @@ body {
 .hiking-homepage,
 .hikers {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Image styles */
@@ -77,23 +77,28 @@ h2 {
 .homepage-link {
   text-align: center;
   margin-top: 0px;
-  background-color: white; /* Dark gray background */
+  background-color: rgb(82, 87, 83); /* Dark gray background */
   padding: 0px; /* Increase padding for better visibility */
+  height: 120px;
+  margin: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 #subheader {
   font-size: 1rem;
   margin-top: 0px;
   margin-bottom: 30px;
-  color: #324939;
+  color: #cad2cc;
+  padding-top: 10px;
 }
 
 #get-started-btn {
   background-color: #6b9b7b;
   color: #e3f3ec;
-  padding: 15px 20px;
+  padding: 20px 25px;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 20px;
   cursor: pointer;
   text-decoration: none;

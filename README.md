@@ -1,16 +1,14 @@
 # Tube2Trail
 
-Tube2Trail is an innovative mobile application designed to connect users with similar interests and facilitate group activities. Whether you're an avid hiker, a foodie looking to explore new restaurants, or someone simply seeking new adventures, Tube2Trail aims to make the process of finding like-minded individuals and organizing group outings seamless and enjoyable.
+Tube2Trail is an innovative mobile application designed to connect users stuck in the rat race longing for adventure beyond their city limits. It offers a plethora of activities that will urge people to escape their comfort zone and break up the working week. In a quick 5 minutes a user can go from being intimidated by the outdoors to ready to tackle it with new found relationships with like-minded people. 
 
 ## Features
 
-- **Activity Matching**: Users can browse through a variety of activities such as hiking, dining, movie nights, and more. They can indicate their interest by swiping right to like or left to dislike.
+- **Activity Matching**: Users can browse through a variety of activities such as hiking, climbing, biking, kayaking and more. They can indicate their interest by selecting like or dislike for each.
 
 - **Group Chat Integration**: Upon liking an activity, users are automatically placed into a group chat with others who have shown interest in the same activity. This allows for easy communication and coordination among group members.
 
 - **Schedule Planning**: Group members can collaborate within the chat to set a date and time for the activity. The app provides tools to help users find a mutually convenient schedule.
-
-- **Location-Based Suggestions**: Tube2Trail utilizes location data to suggest activities and group outings tailored to the user's vicinity, making it easy to discover new experiences in their area.
 
 ## Installation
 

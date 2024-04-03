@@ -16,7 +16,7 @@ To get started with Tube2Trail, follow these simple steps:
 
 1. Clone this repository to your local machine.
     ```
-    git clone https://github.com/your-username/Tube2Trail.git
+    git clone https://github.com/dumi999/Tube2Trail.git
     ```
 
 2. Install the necessary dependencies.
